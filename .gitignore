@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.codex/
+.claude/
+artifacts/audio/**
+artifacts/transcripts/private/**
+*.wav
+*.m4a
+*.webm
+*.flac
