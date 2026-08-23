@@ -2,115 +2,203 @@
 
 ## Purpose
 
-This is a routing guide for an AI coach, not a fixed curriculum, profession-specific course, or a promise that every learner follows the same order. Use it with `learner/PROFILE.md` and `learner/PROGRESS.md` to choose the smallest useful next learning activity.
+This is a routing guide for adaptive diagnostic, material selection, and goal-aligned practice. It is not a fixed curriculum or a promise that learners move through skills in one universal order.
 
-`start` identifies why the learner needs English and the situations that matter before this guide selects material. The learner's practical profile is separate for listening, reading, speaking, and writing. A label such as “roughly A2” is a working estimate from saved evidence, never a certification. Cover all four skills over time; give more time to the learner's priorities and largest barriers.
+Use it with `learner/LEARNING_STATE.md`. The goal contract determines the destination; separate skill evidence determines the starting point; the deadline and study capacity constrain the route. Do not create a long-term plan before the goal contract is actionable.
 
-## Start with placement, not a heavy exam
+Use one shared naming scheme across every skill:
 
-For a new learner, clarify the goal and intended contexts, then collect short raw samples across the four skills. Spread these across sessions when helpful.
+| Working label | Practical meaning |
+| --- | --- |
+| A0–A1 Foundation | Direct, highly familiar language with substantial context or support |
+| A2 Basic | Short routine communication and familiar information |
+| B1 Independent | Connected understanding or production in familiar contexts |
+| B2 Flexible | Detailed, increasingly spontaneous work with reasons and interaction |
+| C1+ Advanced | Precise, implicit, extended, or high-pressure communication |
 
-| Skill | Lightweight starting evidence | Important boundary |
+These are provisional evidence summaries rather than certification. Use ranges such as `A1–A2` and a confidence field when evidence is incomplete. A learner may read at B2 Flexible and speak at A2 Basic. Vocabulary keeps separate receptive and productive estimates.
+
+## Adaptive diagnostic
+
+Start easy enough for the learner to show something real. Change one dimension at a time: length, speed, support, familiarity, interaction, reasoning, or time pressure.
+
+```text
+manageable?
+  ├── no  → stop, simplify, or move down; record the barrier
+  └── yes → record what worked; raise one dimension when more evidence is needed
+```
+
+Do not make a beginner fail an advanced task merely to confirm a lower band. Do not continue upward after the evidence is already sufficient to choose a useful next action.
+
+### Listening ladder
+
+| Band | Useful starting evidence | Raise difficulty by |
 | --- | --- | --- |
-| Listening | A short permitted audio with a reliable transcript; learner gives gist and a few details. | Written text alone is not listening evidence. |
-| Reading | A manageable text; learner states the main idea and a few details or answers. | Do not turn every unknown word into a lookup task. |
-| Speaking | A short unscripted introduction or familiar-topic response, preferably recorded. | If voice is unavailable, label typed speech as a limited proxy. |
-| Writing | A short, unaided message or description for a real audience. | Preserve the first draft. |
+| A0–A1 Foundation | Very short, slow, contextual audio; identify topic, speaker intent, or a few familiar items. | Slightly less visual support, one or two details, or natural connected speech. |
+| A2 Basic | Short familiar conversation or instruction; recover gist and selected details. | Length, normal pace, an unfamiliar detail, or a short retell. |
+| B1 Independent | Natural relevant clip; recover main point, support, and important missed moments. | Speed, density, accent, inference, or note-free retelling. |
+| B2 Flexible | Longer or multi-speaker speech; track stance, detail, and interaction. | Unfamiliar accents, competing views, ambiguity, or live response. |
+| C1+ Advanced | Extended, dense, or implicit speech; synthesize and respond precisely. | High-pressure interaction, multiple sources, or specialized nuance. |
 
-After each sample, record what the learner could do, what blocked them, and confidence in the estimate. Start teaching from the evidence already available; do not wait to complete a perfect four-skill profile.
+Use actual permitted audio with a reliable transcript. If the environment cannot provide it, record `Environment-limited — audio unavailable`, plan provisionally from other evidence, and name a later collection opportunity.
 
-## Level-aware routing
+### Reading ladder
 
-### Foundation: A0–A1
+| Band | Useful starting evidence | Raise difficulty by |
+| --- | --- | --- |
+| A0–A1 Foundation | Short contextual text; identify main message and familiar details. | Less support, connected sentences, or a simple response. |
+| A2 Basic | Short message, article, or instructions; recover main idea and key details. | Length, fewer lookups, structure reconstruction, or new context. |
+| B1 Independent | Relevant article or familiar technical text; identify paragraph roles and explicit support. | Inference, assumptions, or less familiar content. |
+| B2 Flexible | Detailed specialist text; track claims, evidence, assumptions, and trade-offs. | Counterexample, conflicting sources, or time pressure. |
+| C1+ Advanced | Dense or implicit text; evaluate reasoning, stance, and register precisely. | Multi-source synthesis, hidden assumptions, or unfamiliar disciplines. |
 
-**Main objective:** build enough comprehensible language to handle direct, familiar interaction.
+Unknown-word count is not a reading level. Track whether an item blocks the message, reasoning, or near-term task.
 
-- Prefer very short, slow, highly contextual audio or text; familiar topics; repeated common questions; sentence-level output.
-- Build core chunks, sound awareness, and simple sentence patterns before specialised or high-stakes tasks.
-- Introduce a few new chunks, then close the source and practise recognition and use.
-- Speaking can start with a name, role, routine, preference, or what happened today. Writing can start with messages and connected sentences.
-- Increase complexity only when the learner can complete the current task with support that is shrinking over time.
+### Speaking ladder
 
-### Basic independence: A2
+| Band | Useful starting evidence | Typical output |
+| --- | --- | --- |
+| A0–A1 Foundation | Formulaic but meaningful answers about self, routine, preference, or an immediate situation. | Three or four sentences or roughly 20–30 seconds. |
+| A2 Basic | Connected familiar explanation plus one or two follow-up questions. | Roughly 45–90 seconds. |
+| B1 Independent | Experience, cause, plan, opinion, or familiar work problem with reasons. | Roughly 2–3 minutes with repair. |
+| B2 Flexible | Technical explanation, trade-off, meeting update, incident, position, and stakeholder questions. | Extended turn plus spontaneous interaction. |
+| C1+ Advanced | Nuanced, high-pressure, or multi-party communication with precise repair and stance. | Sustained interaction across changing demands. |
 
-**Main objective:** manage short everyday and work exchanges, then retell familiar information.
+Prefer recording. Typed output can show language choices but is only a limited proxy for pronunciation, timing, listening-response coupling, and fluency. If recording is unavailable, label those dimensions environment-limited and continue a provisional plan.
 
-- Use short conversations, messages, instructions, and accessible work-related material.
-- Practise common sentence patterns, past and future time, clarification, repair, and short retelling.
-- Ask for 30–90 second spoken responses, short practical writing, and a small number of follow-up questions.
-- Keep reading and listening manageable; authentic-ish material is useful when the learner can recover the main meaning.
+### Writing ladder
 
-### Independent communication: B1–B2
+| Band | Useful starting evidence | Raise difficulty by |
+| --- | --- | --- |
+| A0–A1 Foundation | Connected sentences or a short practical message with a clear reader. | Add a reason, sequence, or simple request. |
+| A2 Basic | Paragraph, email, update, or familiar explanation. | Audience fit, organization, time limit, or fewer supports. |
+| B1 Independent | Structured familiar explanation or practical work/study communication. | Evidence, trade-offs, register, or changed audience. |
+| B2 Flexible | Detailed proposal, report, or specialist document for a defined reader. | Concision, synthesis, conflicting constraints, or time pressure. |
+| C1+ Advanced | Complex, high-stakes, or multi-source document with precise register. | Ambiguity, competing stakeholders, or exacting revision. |
 
-**Main objective:** understand and explain familiar and professional material with increasing spontaneity.
+Preserve the unaided draft and learner-authored revision. A model rewrite is not writing evidence.
 
-- Use longer listening and reading, relevant conversations, updates, explanations, email, and audience-aware writing.
-- Move from prepared answers to follow-ups, trade-offs, reasons, evidence, and changed-context transfer.
-- Increase length, speed, topic unfamiliarity, and audience pressure one dimension at a time.
-- Use specialist vocabulary only when it recurs in the learner's actual goals or current materials.
+## Turn baseline into a path
 
-### Advanced flexibility: C1+
+When there is enough evidence to act:
 
-**Main objective:** communicate accurately and flexibly in complex, implicit, or high-pressure settings.
+1. Decompose the real goal into listening, reading, speaking, writing, and vocabulary demands.
+2. Compare those demands with the separate skill profile.
+3. Name the smallest set of gaps most likely to block the goal.
+4. Set a cycle direction that fits the deadline and available sessions.
+5. Fill the skill plan with current level, goal demand, weekly frequency, and main method.
+6. Schedule this week's sessions with duration, focus, and evidence target.
+7. Select the next task and explain its link to the goal and current evidence.
 
-- Use extended, accent-diverse, or multi-source material; meetings, negotiation, argument, synthesis, and precise revision.
-- Focus feedback on nuance, register, structure, inference, interaction, and the few language choices that change meaning.
+Cover all four skills over time, but do not allocate them equally by default. Maintain stronger skills lightly while investing in the goal-critical gap. Adjust allocation after evidence, especially a weekly review; do not rewrite the entire path after one difficult session.
+
+## Material selection
+
+Choose material that is lawful to use, relevant, and inspectable. Realistic material is valuable only when it remains learnable.
+
+- If almost every sentence or idea is unknown, reduce length or complexity and establish foundation language.
+- If the learner gets gist but misses selected details, the current difficulty is often useful for focused work.
+- If the task is trivial, increase only one variable: speed, length, support, unfamiliarity, interaction, audience, or time pressure.
+- For intensive listening, require a reliable transcript.
+- For goal-specific work, sanitize confidential material and preserve only what is safe.
+
+Use two complementary modes:
+
+- **Intensive:** short, detailed, inspectable practice with repair and evidence.
+- **Extensive:** longer, meaning-focused, low-pressure exposure for fluency, familiarity, and enjoyment.
+
+Extensive exposure does not replace intensive diagnosis and repair. Intensive work should not consume every encounter with English.
+
+## Vocabulary foundation
+
+Treat vocabulary as shared infrastructure for the four skills, not a separate fifth subject.
+
+Choose chunks, collocations, frames, and domain phrases when they recur, block meaning, combine usefully, are likely to be used soon, or are critical to the goal. Ignore low-value detail that is unlikely to recur and does not affect the task.
+
+Keep the active set small. In a normal 25–45 minute session, usually introduce no more than five to eight genuinely new chunks, and fewer for a beginner or when due retrieval already consumes attention. This is a guardrail, not a quota.
+
+For each active item, teach only what supports use:
+
+- current sense in context;
+- pronunciation or sound recognition when relevant;
+- useful patterns and collocations;
+- register or constraint when it changes meaning;
+- source and a learner-owned example.
+
+Then close the source and seek evidence through listening recognition, reading in a new context, spoken retrieval, written use, and delayed transfer. Do not reduce review to translation rereading.
+
+### Performance-responsive spacing
+
+There is no universal review calendar. After an unaided check:
+
+- easy, accurate recall → schedule later;
+- effortful but correct recall → use a similar interval;
+- repeated failure → review sooner, simplify the prompt, or repair a prerequisite;
+- recognition without productive use → schedule a speaking or writing task.
+
+Store the resulting date, prompt, and acceptance criteria only in `reviews/QUEUE.md`. The vocabulary entry keeps evidence and a link to that queue item.
 
 ## Skill recipes
 
-### Vocabulary: encounter → understand → recognise → retrieve → use → transfer
+### Listening: gist → inspect → repair → retell
 
-Choose three to eight chunks from current material or a real upcoming task. Prefer items that block meaning, recur, collocate usefully, or will be used soon. For each, make current meaning, sound or pronunciation, collocation, and register clear; then ask for a closed-source gap, spoken response, or new written context. Keep only active items in `learner/VOCABULARY.md` and schedule a later recall when the learner needs it.
+1. Set one concrete purpose and listen once without the transcript for gist.
+2. Listen again for selected details and mark missed or uncertain timestamps.
+3. Classify each important miss: unknown language, known-but-not-heard, connected speech, sentence length, attention, inference, or missing background knowledge.
+4. Open the transcript only for targeted repair.
+5. Work on two or three useful segments or chunks; use shadowing only when sound-to-language mapping is the issue.
+6. Close the transcript, listen again, and retell or respond.
+7. Use parallel audio later to test transfer.
 
-### Listening: intensive comprehension loop
+Repeated listening without identifying the barrier is not a repair strategy.
 
-1. Use a short permitted audio with a reliable transcript and a manageable goal.
-2. Listen once without the transcript; capture gist.
-3. Listen again; capture selected details or uncertain moments.
-4. Check the transcript. Classify the main barrier: unknown language, known-but-not-heard, connected speech, sentence length, inference, or attention.
-5. Learn three to five useful chunks or sound features, then listen again without the transcript.
-6. Retell briefly. Save only useful evidence and use parallel material later for transfer.
+### Reading: structure → blockers → reasoning → reconstruction
 
-Use extensive listening separately for enjoyable, low-pressure exposure. It does not replace inspectable intensive work.
+1. First pass without a dictionary: identify purpose, structure, and main idea; mark possible blockers.
+2. Second pass: inspect only recurring, domain-critical, or reasoning-critical language.
+3. Close the dictionary and reconstruct the text's structure or message.
+4. At foundation levels, retell the main idea and key details.
+5. At higher levels, distinguish text-supported claims, reasonable inference, and unsupported statements; identify evidence, assumptions, and trade-offs.
+6. Add a counterexample, changed audience, or parallel text later for transfer.
 
-### Reading: meaning before lookup loop
+### Speaking: sound and chunks → repeated topics → interaction
 
-1. Read without a dictionary and state the main idea.
-2. Mark only words or chunks that block the message, reasoning, or upcoming task.
-3. Examine those items in context, then read again.
-4. Close the text and summarise from memory.
-5. Answer one question that changes the audience, scenario, or point of view.
-
-Use short texts for foundation learners and expand length only when main meaning stays recoverable. Keep extensive reading enjoyable rather than converting it into dense homework.
-
-### Speaking: prepared meaning to flexible interaction
-
-Build from clear sounds and short familiar answers to repeated common topics, follow-up questions, repair, and spontaneous interaction. Useful progression:
+Develop clear production before demanding long complexity:
 
 ```text
-introduce yourself and daily life
-  → describe a current task or past event
-  → ask for clarification and give a status update
-  → explain a process, solve a problem, or compare options
-  → lead a discussion, defend a position, or present
+useful sounds and high-frequency chunks
+  → short formulaic but meaningful responses
+  → familiar repeated topics
+  → connected explanations
+  → follow-up questions, clarification, and repair
+  → goal-specific interaction and pressure
 ```
 
-Use recordings when possible. A first take, self-noticing, limited feedback, and a later learner take are more useful than a model monologue.
+Maintain a small speaking topic bank in `learner/LEARNING_STATE.md`: foundation topics, common situations, and goal-specific tasks. Revisit them until responses become flexible rather than memorized, and mark each topic as untested, developing, stable, or transfer-needed.
 
-### Writing: sentence to audience-aware document
+Use a first take, learner self-noticing, two or three targeted corrections, and a learner-authored retry. A prepared script can support acquisition, but reading it aloud is not spontaneous speaking evidence.
+
+### Writing: purpose → draft → layered review → learner revision
+
+1. Define audience, purpose, facts, conditions, and acceptance criteria.
+2. Produce a timed or otherwise controlled unaided draft.
+3. Ask the learner to review task completion and factual accuracy first.
+4. Review structure and reader usability second.
+5. Review sentences, vocabulary, grammar, and register last, selecting only high-impact issues.
+6. Require the learner to revise; preserve both versions.
+7. Use a parallel task with a different audience or scenario later.
+
+## Assemble today's task
+
+A useful integrated session often uses one topic across representations:
 
 ```text
-connected sentences
-  → short practical message
-  → paragraph and explanation
-  → email or work/study update
-  → audience-aware proposal, report, or document
+real material
+  → listen or read for meaning
+  → repair a few goal-relevant chunks
+  → close the source
+  → speak or write for a real audience
+  → self-notice, feedback, and retry
 ```
 
-Set audience and purpose before the unaided draft. Feedback follows self-noticing, targets the highest-impact issues, and requires learner revision. A parallel task later tests whether the skill transferred.
-
-## Assemble a useful session
-
-One piece of material can serve several skills: listening or reading can reveal chunks, which can feed a short spoken retelling or written response. Do not force every session to cover every skill. Use `learner/PROGRESS.md` to select the priority and `reviews/QUEUE.md` to protect delayed recall and transfer.
-
-If material overwhelms the learner, reduce its length or complexity and build the missing foundation. If it is too easy, change only one variable: speed, length, support, audience, topic, or time pressure.
+State why the task is next, its expected duration, and the evidence it should produce. Save evidence under the actual skills measured rather than summarizing the session as “good” or “bad.”

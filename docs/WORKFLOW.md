@@ -1,64 +1,88 @@
-# Agent Workflow
+# Recording and Review Workflow
 
-## Read the right context
+Read only the section needed for the current interaction. Runtime routing and teaching behavior live in `.agents/skills/learn/SKILL.md`; pedagogy recipes live in `docs/LEARNING_PATH.md`.
 
-Before a meaningful session, read `AGENTS.md`, then the learner profile, progress, active vocabulary, recurring errors, and review queue. Read `docs/LEARNING_PATH.md` when selecting level, material, or a skill recipe. Read only the relevant recent session when it helps; do not load every historical session by default.
+## File ownership
 
-## Choose the next action
+| File | Owns |
+| --- | --- |
+| `learner/PROFILE.md` | Stable context, access constraints, and preferences |
+| `learner/LEARNING_STATE.md` | Goal contract, time budget, baseline, cycle, skill plan, weekly sessions, and next action |
+| `learner/VOCABULARY.md` | Active chunks and independent evidence |
+| `learner/ERRORS.md` | Recurring or high-impact patterns |
+| `reviews/QUEUE.md` | All delayed-review timing, prompts, and acceptance criteria |
+| `sessions/` | Raw attempts and meaningful dated evidence |
 
-When the learner invokes `$start`, asks for help starting to learn English, or their practical profile is not yet established, use `.agents/skills/start/SKILL.md`. Start by identifying the learner's primary purpose and real situations for English. This is lightweight goal discovery, placement, and first learning—not a formal assessment.
+Do not duplicate review due dates in vocabulary. Do not duplicate the active goal or weekly plan in the profile.
 
-When the learner asks to study:
+## Complete a plan
 
-1. If a useful item in `reviews/QUEUE.md` is due, do that review first.
-2. Otherwise use `learner/PROGRESS.md`, `learner/VOCABULARY.md`, and `docs/LEARNING_PATH.md` to choose manageable material and one or more connected skill activities aligned with the learner's priorities.
-3. Use a changed-context task when checking retention or transfer. If the learner has no practical evidence yet but asks to practise, begin with a simple familiar task rather than an advanced work scenario.
+A cycle plan is ready only when:
 
-When the learner asks for a review, use `.agents/skills/review/SKILL.md`. When they ask for a baseline or milestone check, use `.agents/skills/assess/SKILL.md`.
+- the goal contract and study capacity are actionable;
+- available skill evidence is sufficient to identify a provisional gap;
+- environment-limited evidence is labeled and given a later collection opportunity;
+- the skill plan names weekly frequency and main method for every relevant area;
+- this week's sessions have a duration, focus, evidence target, and schedule or ordered slot;
+- the next action is concrete.
 
-## Conduct a practice session
+Prefer specific frequency such as “speaking 3× this week” over vague priority labels. Use the learner's preferred days, time, timezone, and missed-session fallback. If those are unknown, schedule an ordered session slot and collect calendar preferences without blocking practice.
 
-Use `.agents/skills/study/SKILL.md`. Do not turn a short interaction into unnecessary ceremony. The learner does not operate a state machine; the agent quietly follows the method.
+## Record a meaningful session
 
-A session may connect skills around one piece of meaningful material: for example, listen or read → identify a few useful chunks → retell or write. Use the applicable recipe in `docs/LEARNING_PATH.md`. For genuinely new language, give concise input first and then require retrieval or use without the source. For a retrieval or performance task, preserve the unaided-attempt → self-noticing → feedback → learner-retry sequence.
-
-A meaningful session usually contains reusable learning evidence: an unaided attempt plus a learner-authored retry, an assessment, or a delayed review. Do not create a session file merely because a conversation happened; a tiny question, vocabulary lookup, explanation, or abandoned exercise does not need a record.
-
-For a meaningful session, create `sessions/YYYY-MM-DD-short-topic.md` using this shape:
+Create `sessions/YYYY-MM-DD-short-topic.md` only for reusable evidence: diagnostic output, an unaided attempt and learner retry, delayed review, weekly review, or assessment.
 
 ```markdown
 # Session — Short topic
 
-## Task
+## Goal link and task
 
-## Material and target language
+## Conditions and material
 
-## Attempt
+## Input or target language
+
+## Unaided attempt
 
 ## Self-noticing
 
 ## Feedback
 
-## Retry
-
-## What improved
+## Learner retry
 
 ## Skill evidence
 
 ## Follow-up
 ```
 
-Keep the raw attempt as written. The added sections are optional when they do not fit the session. Use `Not completed` only for sections the learner deliberately did not reach; do not invent learner output.
+Use only applicable sections. Keep the raw attempt intact and never invent learner output. A lookup, explanation, tiny question, or abandoned exercise does not need a session file.
 
-## Update repository truth sparingly
+## Weekly review
 
-After a meaningful session:
+If a short due recall can supply retention evidence within today's budget, run it before scoring the week.
+
+Score each dimension from 0 to 2 and cite brief evidence:
+
+| Dimension | 0 | 1 | 2 |
+| --- | --- | --- | --- |
+| Completion | Important work not attempted | Partly completed | Important planned work completed |
+| Quality | Meaning often failed | Meaning mostly arrived with limits | Current task criteria met |
+| Retention | Little unaided recall | Partial or unstable recall | Useful delayed recall |
+| Transfer | No changed-context use | Assisted or partial transfer | Independent transfer |
+
+Also note repeated, improving, and new errors; material fit; and energy or recovery. Change one important variable for the next week, then refresh the skill plan only where that change matters, schedule the next week's sessions, and set the next action.
+
+## Explicit assessment
+
+Assessment runs only when requested. Agree on observable conditions before starting. Do not teach, hint, rewrite, or reveal target language until submission. Preserve raw output and record separate skill performance, confidence, limitations, and the next learning implication. Do not claim official CEFR certification or a validated exam score.
+
+## Finish state updates
+
+After meaningful work:
 
 - append the session record;
-- update `PROFILE.md` when the learner's goal, primary situations, priorities, or material preferences genuinely changed;
-- update `PROGRESS.md` when the primary purpose, skill profile, phase, priority, bottleneck, progress, placement, assessment, or next work genuinely changed;
-- update `VOCABULARY.md` only for chunks that are active and have useful source or performance evidence;
-- add or revise an item in `ERRORS.md` only for patterns supported by repeated or high-impact evidence;
-- add, complete, defer, or remove useful prompts in `reviews/QUEUE.md`.
+- update `PROFILE.md` only when stable context or preferences changed;
+- update `LEARNING_STATE.md` when goal, baseline, plan, bottleneck, evidence, weekly schedule, or next action changed;
+- update vocabulary and errors only from useful evidence;
+- add, complete, defer, replace, or remove queue items as review needs change.
 
-Do not create duplicate summaries, fake metrics, or administrative records. If no durable update is useful, leave the learner files unchanged.
+The next action must include task, duration, material when known, evidence and acceptance criteria, reason, and the best available date/time or delay condition. Notification delivery remains outside the repository.
