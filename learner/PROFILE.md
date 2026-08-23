@@ -32,6 +32,20 @@ Not established yet.
 
 Record preferences only when they materially affect learning: topics, feedback language and style, intensity, material types, comfort with repetition, or things to avoid.
 
+## Material preferences
+
+**Topics or domains:** Not established.
+
+**Preferred listening formats:** Not established.
+
+**Preferred reading formats:** Not established.
+
+**Sources that worked well:** None recorded.
+
+**Avoid:** Not established.
+
+Keep this source pool small. Reuse sources whose level, format, and content worked before searching broadly again; select a specific item rather than assigning a channel, website, or category.
+
 ## Longer-term interests
 
 Not established yet.

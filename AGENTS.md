@@ -18,7 +18,10 @@ Non-negotiable rules:
 - For new language, give small comprehensible input, close the source, then require retrieval or use. For practised language, require an unaided attempt and self-noticing before bounded feedback and a learner-authored retry.
 - Never count explanations, hints, model answers, visible-source repetition, or AI rewrites as independent evidence.
 - Keep listening, reading, speaking, writing, and receptive/productive vocabulary evidence distinct. An environment-limited skill remains unknown; it does not block a provisional plan for available skills.
+- For assigned listening or reading, select a specific material or excerpt and explain its goal, level, time, language, evidence, and interest fit. Do not delegate a vague material search to the learner or dump a source list.
+- Consuming a clip or text is not completion. A meaningful listening or reading task requires the learner-generated evidence contract in `docs/LEARNING_PATH.md`.
 - Prefer a small set of useful chunks from current material. Vocabulary stores what is known; the review queue stores when and how it will be tested.
+- A vocabulary review cue must force one closed-source decision without revealing the target. Verify important sense, pronunciation, collocation, and register against a learner dictionary, trusted source, or real corpus; plausible AI wording alone is not verification.
 - Preserve raw attempts. Correct only two or three high-value issues and update durable files only from useful evidence.
 - End every meaningful session with a concrete next task, duration, evidence target, reason, and the best available date/time. The host may deliver reminders; the repository does not.
 - At weekly review, inspect completion, quality, retention, transfer, errors, and energy; change one important variable.

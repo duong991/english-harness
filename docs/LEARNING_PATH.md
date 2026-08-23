@@ -88,26 +88,73 @@ When there is enough evidence to act:
 4. Set a cycle direction that fits the deadline and available sessions.
 5. Fill the skill plan with current level, goal demand, weekly frequency, and main method.
 6. Schedule this week's sessions with duration, focus, and evidence target.
-7. Select the next task and explain its link to the goal and current evidence.
+7. Select exact listening or reading materials for upcoming sessions and record why they fit.
+8. Select the next task and explain its link to the goal and current evidence.
 
 Cover all four skills over time, but do not allocate them equally by default. Maintain stronger skills lightly while investing in the goal-critical gap. Adjust allocation after evidence, especially a weekly review; do not rewrite the entire path after one difficult session.
 
 ## Material selection
 
-Choose material that is lawful to use, relevant, and inspectable. Realistic material is valuable only when it remains learnable.
+The agent selects a specific lawful material or exact excerpt; it does not ask the learner to find a generic podcast or article. Prefer one best item. Offer at most two choices when preference matters, recommend one, and never dump a source list.
 
-- If almost every sentence or idea is unknown, reduce length or complexity and establish foundation language.
-- If the learner gets gist but misses selected details, the current difficulty is often useful for focused work.
-- If the task is trivial, increase only one variable: speed, length, support, unfamiliarity, interaction, audience, or time pressure.
-- For intensive listening, require a reliable transcript.
-- For goal-specific work, sanitize confidential material and preserve only what is safe.
+Evaluate exact candidates on six factors:
 
-Use two complementary modes:
+| Factor | Selection question |
+| --- | --- |
+| Goal relevance | Does its topic and communication demand serve the current real outcome? |
+| Level fit | Can the learner recover enough meaning for the task to be challenging but finishable? |
+| Time fit | Can the material, attempts, repair, and output fit today's session? |
+| Language value | Does it contain a small amount of recurring, blocking, near-use, or domain-critical language? |
+| Evidence availability | Can the agent inspect comprehension with a reliable transcript/captions or stable text? |
+| Interest/domain | Is the learner likely to care enough to finish and reuse the content? |
 
-- **Intensive:** short, detailed, inspectable practice with repair and evidence.
-- **Extensive:** longer, meaning-focused, low-pressure exposure for fluency, familiarity, and enjoyment.
+Reject or adapt a candidate when a critical factor fails. A long source may work only when an exact session-fit excerpt is named. Intensive listening requires a reliable transcript or captions. Sanitize confidential material and do not reproduce copyrighted material beyond what the task lawfully permits.
 
-Extensive exposure does not replace intensive diagnosis and repair. Intensive work should not consume every encounter with English.
+Before the task, present and record a selection card:
+
+```markdown
+Material:
+Link or source:
+Exact duration, excerpt, or reading time:
+Mode: intensive | extensive
+Why selected:
+Difficulty and expected new language:
+Skill target:
+Evidence required:
+```
+
+If almost every sentence or idea is unknown, reduce length or complexity and establish foundation language. If gist is clear but selected details or reasoning fail, the difficulty is often useful for intensive work. If everything is trivial, increase only one variable: speed, length, support, unfamiliarity, interaction, audience, or time pressure.
+
+### Level-driven listening material
+
+| Working level | Typical intensive material | Primary task |
+| --- | --- | --- |
+| A0–A1 Foundation | About 30–90 seconds; clear, slow, familiar speech with strong context | People, time, place, direct need, or main event |
+| A2 Basic | About 1–3 minutes; familiar general or simple work topic | Gist, selected details, and short response |
+| B1 Independent | About 2–5 minutes; normal-ish relevant speech | Main points, important details, and retelling |
+| B2 Flexible | Meeting, interview, tutorial, or lecture excerpt at natural speed | Position, reason, attitude, detail, and interaction |
+| C1+ Advanced | Extended, implicit, accent-diverse, or multi-speaker excerpt | Synthesis, nuance, and precise response |
+
+### Level-driven reading material
+
+| Working level | Typical intensive material | Primary task |
+| --- | --- | --- |
+| A0–A1 Foundation | Short notice, message, instruction, or highly contextual paragraph | Direct meaning and key details |
+| A2 Basic | Short simple article, documentation, or practical text | Main idea, sequence, and useful details |
+| B1 Independent | Practical article, documentation, short technical blog, or accessible postmortem | Main point, structure, and reasons |
+| B2 Flexible | Specialist article, RFC/design section, postmortem, or engineering discussion | Claims, evidence, assumptions, and trade-offs |
+| C1+ Advanced | Long implicit text or multiple complex sources | Evaluation and synthesis |
+
+Unknown-word count alone never determines reading fit. Ask whether unknown language blocks the main idea, structure, reasoning, or near-term task.
+
+### Intensive and extensive modes
+
+| Mode | Listening | Reading | Evidence load |
+| --- | --- | --- | --- |
+| Intensive | Short excerpt, repeated listening, transcript-based diagnosis and repair | Short dense text, selective lookup, structure/reasoning reconstruction | Full Evidence Contract |
+| Extensive | Usually 10–30+ minutes, meaning or enjoyment, little pausing | Article, chapter, or book read with minimal interruption | Brief gist/reaction and material-fit note |
+
+Extensive exposure does not replace intensive diagnosis and repair. Intensive work should not consume every encounter with English. Do not convert enjoyable listening or reading into line-by-line homework.
 
 ## Vocabulary foundation
 
@@ -127,6 +174,67 @@ For each active item, teach only what supports use:
 
 Then close the source and seek evidence through listening recognition, reading in a new context, spoken retrieval, written use, and delayed transfer. Do not reduce review to translation rereading.
 
+### Verification before confidence
+
+For important active vocabulary, verify:
+
+- current sense and pronunciation with a reputable learner dictionary or trusted reference;
+- collocation and register with that reference, a trusted domain source, or real corpus examples;
+- the exact source occurrence when it is being taught as a material-specific use.
+
+An AI-generated collocation is a candidate, not evidence. If reliable verification is unavailable, mark the field `Unverified` and do not present it as preferred idiomatic phrasing. Keep verification provenance in `learner/VOCABULARY.md`.
+
+### Retrieval cue design
+
+The front of a vocabulary review must force retrieval, not familiarity:
+
+- give a situation, meaning, audio cue, gap, or communicative need;
+- test one decision: sense, sound recognition, collocation, register, or productive use;
+- hide the target, first letters, answer-bearing translation, and source sentence;
+- change context when testing production.
+
+The linked vocabulary entry is the knowledge side: target chunk, pronunciation, current sense, useful pattern, register, verified sources, learner example, and any contrast. Keep the queue cue short; a long card becomes rereading.
+
+For example:
+
+```text
+Context: A dependency threatens the schedule.
+Cue: The dependency may ____ a risk to the schedule.
+Target decision: retrieve the goal-relevant collocation.
+Contrast after attempt: pose a risk to; compare with be at risk of, which describes the affected thing.
+```
+
+Use translation only when translation is genuinely the capability being tested. Prefer recognition in new speech/text or changed-context speaking/writing.
+
+### Vocabulary-priority practice
+
+When vocabulary is the current bottleneck, a useful 25–45 minute lesson often follows:
+
+```text
+closed-source recall of due chunks
+→ goal-relevant material
+→ select a few verified new chunks
+→ one-decision retrieval cues
+→ changed-context speaking or writing
+→ evidence update and delayed queue item
+```
+
+Record old items as easy, effortful but correct, or failed. Select fewer new chunks when retrieval load is high. Do not add unrelated items merely to reach a count.
+
+Record the cue, raw response, result, evidence channel, and queue action for each item rather than one aggregate recall score. When the learner declares an item “due” but the repository has no record, treat it as an `Unrecorded carry-in baseline`: identify and verify it, test it closed-source, and schedule only a future review. Never backdate review history or count this first repository attempt as delayed evidence.
+
+### Weekly and longer vocabulary cycle
+
+| Horizon | Useful structure |
+| --- | --- |
+| One week | One real theme; a manageable active set; at least two closed-source retrieval opportunities when schedule permits; one integrated speaking or writing output |
+| About 30 days | Parallel material each week; real outputs using the week's chunks; remove duplicates, low-value items, and persistent cue-dependent items that do not serve the goal; compare retention and production |
+| About 12 weeks | Build a small goal-specific domain corpus; use recurring chunks in real professional or personal tasks; expand the domain only after output becomes reasonably stable |
+
+For a vocabulary-priority week, an experienced learner with sufficient time may handle roughly 20–30 active chunks; a beginner or lighter schedule should use fewer. This is a planning range, never a quota.
+
+Before the full goal and time contract exists, a bounded session may create a `Provisional` cycle with only the current theme and observed evidence. Change it to `Active` and schedule the weekly retrieval/output pattern only when the learner's capacity makes the plan actionable.
+
 ### Performance-responsive spacing
 
 There is no universal review calendar. After an unaided check:
@@ -142,24 +250,51 @@ Store the resulting date, prompt, and acceptance criteria only in `reviews/QUEUE
 
 ### Listening: gist → inspect → repair → retell
 
-1. Set one concrete purpose and listen once without the transcript for gist.
-2. Listen again for selected details and mark missed or uncertain timestamps.
+1. Set one concrete purpose and listen once without pausing, transcript, or subtitles; preserve the learner's gist and recalled details.
+2. Listen again without the transcript; capture selected details and mark missed or uncertain timestamps.
 3. Classify each important miss: unknown language, known-but-not-heard, connected speech, sentence length, attention, inference, or missing background knowledge.
 4. Open the transcript only for targeted repair.
-5. Work on two or three useful segments or chunks; use shadowing only when sound-to-language mapping is the issue.
+5. Work on two or three useful segments or chunks; use shadowing when sound-to-language mapping is the issue.
 6. Close the transcript, listen again, and retell or respond.
-7. Use parallel audio later to test transfer.
+7. Schedule similar-difficulty parallel audio with different content when delayed transfer evidence would change the plan.
 
 Repeated listening without identifying the barrier is not a repair strategy.
 
+#### Listening Evidence Contract
+
+A meaningful intensive task is complete only when it preserves learner-generated:
+
+- first-pass gist;
+- important recalled details, often three when level and material allow;
+- uncertain or missed segments, preferably timestamps;
+- classification of the important barriers;
+- an unaided retelling or response after the transcript is closed.
+
+Playback time is not evidence. When a light 0–2 score helps choose the next task, score gist, key detail, segmentation, and retelling comprehensibility from the raw response; add delayed transfer only after parallel material. Record the main barrier and its treatment.
+
+For extensive listening, require only a brief gist or reaction, one note about material fit, and optionally one useful recurring chunk. Do not require timestamp analysis, repeated pausing, or shadowing.
+
 ### Reading: structure → blockers → reasoning → reconstruction
 
-1. First pass without a dictionary: identify purpose, structure, and main idea; mark possible blockers.
+1. Read once within an appropriate timebox and without a dictionary; preserve a one-sentence gist and mark possible blockers.
 2. Second pass: inspect only recurring, domain-critical, or reasoning-critical language.
-3. Close the dictionary and reconstruct the text's structure or message.
-4. At foundation levels, retell the main idea and key details.
-5. At higher levels, distinguish text-supported claims, reasonable inference, and unsupported statements; identify evidence, assumptions, and trade-offs.
-6. Add a counterexample, changed audience, or parallel text later for transfer.
+3. Label the role, sequence, or function of sections or paragraphs at the learner's level.
+4. Close the text and dictionary; reconstruct its message or argument.
+5. At foundation levels, retell the main idea and key details. At higher levels, distinguish text-supported claims, reasonable inference, and unsupported statements; identify evidence, assumptions, trade-offs, or a counterexample.
+6. Schedule similar-difficulty parallel text with different content when delayed transfer evidence would change the plan.
+
+#### Reading Evidence Contract
+
+A meaningful intensive task is complete only when it preserves learner-generated:
+
+- first-pass gist;
+- structure, sequence, or paragraph/section roles appropriate to level;
+- closed-source reconstruction of the message or argument;
+- a supported-detail task at foundation levels, or an evidence/inference-boundary task at higher levels.
+
+Pages read, words consumed, and translation are not sufficient evidence. When a light 0–2 score helps choose the next task, score gist, structure, evidence use, and inference boundary from the raw response; add delayed retelling or transfer only after parallel material. Record whether the main barrier was language, structure, reasoning, attention, or background knowledge.
+
+For extensive reading, require only a brief gist or reaction, one material-fit note, and optionally a useful recurring chunk. Do not turn every unknown word into a lookup.
 
 ### Speaking: sound and chunks → repeated topics → interaction
 

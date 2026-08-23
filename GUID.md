@@ -64,7 +64,8 @@ Bạn vẫn có thể bắt đầu học hoặc làm diagnostic khi contract ch�
 - Deadline và time budget là bao nhiêu?
 - Nghe, đọc, nói, viết và vocabulary đang ở đâu?
 - Gap và bottleneck nào đang chặn goal?
-- Chu kỳ, skill plan theo frequency và các session cụ thể tuần này là gì?
+- Chu kỳ, skill plan, vocabulary cycle và các session cụ thể tuần này là gì?
+- Listening/Reading tuần này dùng item hoặc excerpt cụ thể nào, và tại sao?
 - Evidence nào đã có?
 - Việc nhỏ nhất cần làm tiếp theo là gì, mất bao lâu và tại sao?
 
@@ -76,8 +77,8 @@ Agent mới vào repo chỉ cần đọc dashboard cùng các file learner liên
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Luật bắt buộc cho agent. |
 | [learner/PROFILE.md](learner/PROFILE.md) | Bối cảnh, giới hạn và sở thích tương đối ổn định. |
-| [learner/LEARNING_STATE.md](learner/LEARNING_STATE.md) | Goal contract, baseline, skill plan, lịch session tuần này và next action. |
-| [learner/VOCABULARY.md](learner/VOCABULARY.md) | Chunk/collocation đang học và evidence theo từng kênh. |
+| [learner/LEARNING_STATE.md](learner/LEARNING_STATE.md) | Goal contract, baseline, skill/vocabulary plan, lịch session, material tuần này và next action. |
+| [learner/VOCABULARY.md](learner/VOCABULARY.md) | Chunk/collocation, verification provenance và evidence theo từng kênh. |
 | [learner/ERRORS.md](learner/ERRORS.md) | Pattern lặp lại hoặc ảnh hưởng lớn. |
 | [reviews/QUEUE.md](reviews/QUEUE.md) | Source of truth duy nhất cho thời điểm, prompt và acceptance criteria của recall/transfer. |
 | [docs/LEARNING_PATH.md](docs/LEARNING_PATH.md) | Diagnostic ladder, material rule và recipe theo kỹ năng. |
@@ -112,7 +113,7 @@ Diagnostic phải dẫn đến plan nhìn thấy được:
 
 ```text
 skill profile → goal gap → cycle direction
-→ weekly frequency theo kỹ năng → session cụ thể → next task
+→ weekly frequency theo kỹ năng → session + material cụ thể → next task
 ```
 
 Nếu agent chỉ trả về “Bạn khoảng A2” rồi dừng, diagnostic chưa hoàn thành.
@@ -140,6 +141,31 @@ retrieve chunk đến hạn
 ```
 
 Agent không ép buổi nào cũng phải đủ cả bốn kỹ năng. Evidence vẫn phải được ghi đúng kênh thay vì kết luận chung chung “hôm nay học tốt”.
+
+## Material Selection + Evidence Contract
+
+Với Listening hoặc Reading, agent phải chọn một item cụ thể hoặc một excerpt chính xác. Agent không được giao: “hãy tự tìm podcast B1”, cũng không dump nhiều link.
+
+Material được chọn theo sáu yếu tố:
+
+- phục vụ goal hiện tại;
+- vừa level, challenging nhưng finishable;
+- vừa session time;
+- có chunk/language value đáng học;
+- có transcript/captions/text để kiểm tra khi task cần;
+- hợp topic, domain hoặc sở thích.
+
+Trước task, agent đưa material/link, duration hoặc reading time, intensive/extensive mode, lý do chọn, difficulty và evidence cần tạo. Nếu source quá dài, agent phải chỉ rõ excerpt. Intensive listening không có transcript/captions đáng tin thì không dùng.
+
+`LEARNING_STATE.md` lưu material của tuần để tránh nhảy nguồn ngẫu nhiên. `PROFILE.md` giữ một source pool nhỏ: topic, format và nguồn đã phù hợp trước đó.
+
+Chỉ xem hết video hoặc đọc hết bài không có nghĩa task hoàn thành:
+
+- Intensive Listening cần gist lần đầu, details, vị trí chưa chắc, error classification và retelling khi đã đóng transcript.
+- Intensive Reading cần gist lần đầu, structure/sequence, reconstruction không nhìn bài và evidence/inference task phù hợp level.
+- Extensive Listening/Reading chỉ cần gist hoặc reaction ngắn và một note về material fit; không biến hoạt động thưởng thức thành homework chi tiết.
+
+Khi hữu ích, agent dùng score 0–2 nhẹ để chọn next task, không phải gamification. Delayed check dùng material mới có độ khó và capability demand tương tự, không chỉ bật lại source cũ.
 
 ## Hai vòng học khác nhau
 
@@ -185,7 +211,31 @@ Mỗi item có thể có evidence riêng:
 
 Repo dùng lifecycle nhẹ `New → Learning → Usable`; không giả vờ là một SRS engine.
 
+Với item quan trọng, agent phải kiểm tra sense, pronunciation, collocation và register bằng learner dictionary, trusted source hoặc real corpus. Một collocation do AI tạo ra chỉ là candidate; nếu chưa kiểm tra, item phải ghi `Unverified`.
+
 `VOCABULARY.md` chỉ lưu knowledge/evidence. Khi một item cần test lại, nó liên kết tới `reviews/QUEUE.md`; chỉ queue lưu due date, prompt và acceptance criteria. Trong một buổi 25–45 phút, agent thường không đưa quá 5–8 chunk hoàn toàn mới, và dùng ít hơn khi learner mới bắt đầu hoặc đã có nhiều recall đến hạn.
+
+Retrieval cue phải:
+
+- cho context, meaning, sound hoặc communicative need;
+- chỉ test một decision;
+- không lộ target, first letters hoặc source sentence;
+- chỉ hiện contrast sau khi learner đã attempt.
+
+Nếu vocabulary là bottleneck, `$learn` không mở một lớp từ vựng riêng. Nó chạy:
+
+```text
+recall chunk đến hạn không nhìn notes
+→ material thật cùng một theme
+→ chọn và verify vài chunk mới
+→ retrieval cue
+→ speaking/writing trong context khác
+→ evidence + delayed queue
+```
+
+`LEARNING_STATE.md` giữ weekly vocabulary cycle: theme gắn với goal, active set, retrieval plan, integrated output và end-of-week audit. Cuối tuần agent loại duplicate, low-value hoặc cue-dependent item không còn phục vụ goal; `Usable` có thể quay lại `Learning` nếu delayed evidence thất bại.
+
+Khi chưa đủ goal/time contract, một buổi practice ngắn chỉ tạo cycle `Provisional`; cycle chỉ thành `Active` khi lịch retrieval, output và audit thực sự khả thi. Nếu bạn mang vào một chunk và gọi nó là “đến hạn” nhưng repo chưa có record, agent ghi `Unrecorded carry-in baseline`, giữ cue + raw response theo từng item, verify item rồi mới đặt lần review tương lai — không bịa lịch sử hoặc tính attempt đầu tiên đó là delayed recall.
 
 Khoảng review phụ thuộc performance:
 
@@ -207,12 +257,16 @@ Khoảng review phụ thuộc performance:
 
 Ngoài intensive listening ngắn và inspectable, plan nên có extensive listening dài hơn, nhẹ hơn và tập trung vào ý nghĩa.
 
+Playback time không phải evidence. Session intensive phải giữ gist, details, uncertain segments, error diagnosis và retelling; score nhẹ có thể dùng cho gist, key detail, segmentation và retelling khi nó thay đổi next task.
+
 ### Reading
 
 1. First pass: hiểu purpose, structure và main idea; chỉ đánh dấu blocker.
 2. Second pass: tra item recurring, domain-critical hoặc reasoning-critical.
 3. Đóng dictionary và reconstruct nội dung.
 4. Ở level cao, phân biệt điều text hỗ trợ, inference hợp lý và claim không được hỗ trợ; xem evidence, assumption và trade-off.
+
+Unknown-word count không tự quyết định độ khó. Session intensive phải giữ gist, structure, reconstruction và task về supported detail hoặc inference boundary; score nhẹ có thể dùng cho gist, structure, evidence và inference khi nó thay đổi next task.
 
 ### Speaking
 

@@ -89,6 +89,24 @@ Translate cycle direction into visible weekly work. Use frequency rather than va
 | Reading | Not established | Unknown | Pending goal and baseline | Meaning, structure, and goal-relevant reasoning |
 | Writing | Not established | Unknown | Pending goal and baseline | Audience-aware draft, revision, and parallel task |
 
+## Vocabulary cycle
+
+Use this when productive or receptive vocabulary is a current bottleneck. Keep one goal-linked theme rather than collecting unrelated words.
+
+**Status:** Inactive. Use `Provisional` for a bounded practice before the full goal/time contract exists; use `Active` only when the weekly plan is actionable.
+
+**Theme and goal link:** Not established.
+
+**Active set:** None yet.
+
+**New-candidate budget:** Not established. Set from level, session count, and retrieval load; it is not a quota.
+
+**Closed-source retrieval plan:** Not established. Selected items should normally receive at least two meaningful retrieval opportunities across the week when the schedule allows.
+
+**Integrated weekly output:** Not established. Choose one speaking or writing task that requires the theme in a changed context.
+
+**End-of-week audit:** Keep, move, demote, or remove items from evidence; remove duplicates, low-value items, and items that remain cue-dependent without goal value.
+
 ## This week
 
 **Dates:** Not started.
@@ -109,6 +127,14 @@ Schedule concrete sessions when the goal and baseline allow it. Use preferred da
 | Slot or date | Duration | Focus | Task and evidence | Status |
 | --- | --- | --- | --- | --- |
 | First available | 10–15 min | Goal setup + micro-diagnostic | Confirm a drafted goal contract and produce one short raw sample | Planned |
+
+## This week's materials
+
+Record exact items or exact excerpts after selection. Do not use this table for vague source categories.
+
+| Skill and mode | Specific material | Why selected | Material length / session time | Required evidence | Status |
+| --- | --- | --- | --- | --- | --- |
+| Not selected | Pending goal, baseline, and access check | — | — | — | Open |
 
 ## Evidence so far
 

@@ -45,11 +45,19 @@ Vocabulary connects the four skills rather than acting as a fifth subject. Usefu
 
 Knowledge is evidenced by recognition in speech, understanding in a new text, retrieval in speaking, appropriate written use, and delayed transfer. `learner/VOCABULARY.md` owns that knowledge record; `reviews/QUEUE.md` owns when and how it will be tested.
 
+A good review cue creates one closed-source decision rather than familiarity with a long card. Important sense, pronunciation, collocation, and register claims need a learner dictionary, trusted source, or real corpus evidence; plausible AI wording alone is not verification.
+
+When vocabulary is a bottleneck, organize a goal-linked weekly theme with repeated retrieval and one integrated speaking or writing output. Tracking items without requiring this production is metadata, not a vocabulary learning cycle.
+
 ## Material, retention, and adjustment
 
-Choose lawful, relevant material that is manageable enough to finish. If almost everything is unknown, simplify. If gist is clear but important details fail, focused work is often useful. If everything is trivial, raise one variable such as speed, length, support, topic, interaction, or time pressure.
+Material is part of the learning decision, not homework for the learner to search. Select a specific lawful item or excerpt whose goal relevance, level, session time, language value, evidence availability, and learner interest make it challenging but finishable.
+
+If almost everything is unknown, simplify. If gist is clear but important details fail, focused work is often useful. If everything is trivial, raise one variable such as speed, length, support, topic, interaction, or time pressure.
 
 Intensive work is short and inspectable; extensive exposure is longer and meaning-focused. Both matter.
+
+Consumption time is not comprehension evidence. Intensive listening and reading preserve first-pass meaning, important gaps, reconstruction or retelling, and level-appropriate reasoning evidence. Later parallel material tests whether the capability transfers beyond memory of the original.
 
 Review intervals respond to performance rather than a universal calendar. Weekly review examines completion, quality, retention, transfer, errors, material fit, and energy, then changes one important variable instead of redesigning the whole system.
 
