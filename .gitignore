@@ -9,3 +9,7 @@ artifacts/transcripts/private/**
 *.m4a
 *.webm
 *.flac
+*.mp3
+.cache/
+.agents/**/.cache/
+.gemini/

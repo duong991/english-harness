@@ -156,6 +156,20 @@ Unknown-word count alone never determines reading fit. Ask whether unknown langu
 
 Extensive exposure does not replace intensive diagnosis and repair. Intensive work should not consume every encounter with English. Do not convert enjoyable listening or reading into line-by-line homework.
 
+### Curated starter material pool
+
+When no learner-specific source is recorded in `learner/PROFILE.md`, use these verified starting directions:
+
+- **Listening (Intensive & Foundations):**
+  - *Beginner / A0–A2:* Basic English Grammar (YouTube playlist), ValenESL lessons, EnglishAnyone listening tracks.
+  - *Intermediate / B1–B2:* *New Concept English* Book 3 & 4 (short dense audio with reliable transcripts), 6-Minute English (BBC), tech conference lighting talks (2–4 min excerpts with human captions).
+  - *Extensive Listening:* Classic sitcoms (*Friends*, *Modern Family*), accessible audiobooks (*The Kite Runner*, *Animal Farm*, *The Great Gatsby* via Audible/LibriVox), quality podcasts.
+- **Reading (Intensive & Extensive):**
+  - *Intensive Analysis (B1–B2+):* Short dense essays (*The Economist*, *On Writing Well* by William Zinsser, postmortems, engineering design docs / RFCs).
+  - *Extensive Graded / Accessible Books:* *Animal Farm* (George Orwell), *The Curious Incident of the Dog in the Night-time* (Mark Haddon), *The Diary of a Young Girl* (Anne Frank), *Harry Potter* series (J. K. Rowling), *The Kite Runner* (Khaled Hosseini).
+- **Speaking & Pronunciation:**
+  - *Phonics / Sounds:* *Teach Reading with Phonics* playlist, *EnglishAnyone* conversational tracks.
+
 ## Vocabulary foundation
 
 Treat vocabulary as shared infrastructure for the four skills, not a separate fifth subject.
@@ -235,6 +249,17 @@ For a vocabulary-priority week, an experienced learner with sufficient time may 
 
 Before the full goal and time contract exists, a bounded session may create a `Provisional` cycle with only the current theme and observed evidence. Change it to `Active` and schedule the weekly retrieval/output pattern only when the learner's capacity makes the plan actionable.
 
+### Four encounters instead of one bookmark
+
+For active chunks, use a four-encounter progression before considering an item usable:
+
+| Cadence | Action | Expected Evidence |
+| --- | --- | --- |
+| **Day 0** | Recall meaning from source and read sentence aloud | Accurate meaning and pronunciation check |
+| **Day 1** | Closed-source gap fill and one personalized sentence | Unaided retrieval and accurate form |
+| **Day 3** | Choose correct collocation in a new topic or context | Contextual transfer to novel scenario |
+| **Day 7** | Use naturally in a 60-second spoken talk or short text | Spontaneous production under cognitive load |
+
 ### Performance-responsive spacing
 
 There is no universal review calendar. After an unaided check:
@@ -252,7 +277,12 @@ Store the resulting date, prompt, and acceptance criteria only in `reviews/QUEUE
 
 1. Set one concrete purpose and listen once without pausing, transcript, or subtitles; preserve the learner's gist and recalled details.
 2. Listen again without the transcript; capture selected details and mark missed or uncertain timestamps.
-3. Classify each important miss: unknown language, known-but-not-heard, connected speech, sentence length, attention, inference, or missing background knowledge.
+3. Classify each important miss into one of **five barrier categories**:
+   - **Unknown language:** Word, idiom, or syntactic pattern not yet learned.
+   - **Known but not heard:** Recognized in print, but auditory recognition failed at speed.
+   - **Connected speech & rhythm:** Linking, vowel reductions, weak forms, assimilation, or stress shifts.
+   - **Attention & cognitive load:** Dense information, long sentences, or working memory overload.
+   - **Background knowledge:** Topic context, cultural reference, or domain background missing.
 4. Open the transcript only for targeted repair.
 5. Work on two or three useful segments or chunks; use shadowing when sound-to-language mapping is the issue.
 6. Close the transcript, listen again, and retell or respond.
@@ -280,7 +310,12 @@ For extensive listening, require only a brief gist or reaction, one note about m
 2. Second pass: inspect only recurring, domain-critical, or reasoning-critical language.
 3. Label the role, sequence, or function of sections or paragraphs at the learner's level.
 4. Close the text and dictionary; reconstruct its message or argument.
-5. At foundation levels, retell the main idea and key details. At higher levels, distinguish text-supported claims, reasonable inference, and unsupported statements; identify evidence, assumptions, trade-offs, or a counterexample.
+5. At foundation levels, retell the main idea and key details. At higher levels (B1+), construct a **3-column verification table** with paragraph or section citations:
+
+| Text Explicitly Supports (cite para/line) | Reasonable Inference (cite basis) | Unsupported by Text / False Assumption |
+| --- | --- | --- |
+| Direct statements and verified facts | Clues supporting logical deductions | Claims not substantiated by the passage |
+
 6. Schedule similar-difficulty parallel text with different content when delayed transfer evidence would change the plan.
 
 #### Reading Evidence Contract
@@ -290,7 +325,7 @@ A meaningful intensive task is complete only when it preserves learner-generated
 - first-pass gist;
 - structure, sequence, or paragraph/section roles appropriate to level;
 - closed-source reconstruction of the message or argument;
-- a supported-detail task at foundation levels, or an evidence/inference-boundary task at higher levels.
+- a supported-detail task at foundation levels, or the 3-column evidence/inference table at B1+ levels.
 
 Pages read, words consumed, and translation are not sufficient evidence. When a light 0–2 score helps choose the next task, score gist, structure, evidence use, and inference boundary from the raw response; add delayed retelling or transfer only after parallel material. Record whether the main barrier was language, structure, reasoning, attention, or background knowledge.
 
@@ -298,7 +333,21 @@ For extensive reading, require only a brief gist or reaction, one material-fit n
 
 ### Speaking: sound and chunks → repeated topics → interaction
 
-Develop clear production before demanding long complexity:
+#### IPA / Phonics Quick Reference
+
+Ground pronunciation checks in reliable sound symbols rather than subjective impressions:
+
+- **15 Common Vowels:**
+  - `/ɑ/` (cop, father), `/ə/` (the, about - unstressed), `/ʌ/` (cup, sun - stressed)
+  - `/u/` (boot, too), `/ʊ/` (book, put), `/i/` (beat, see), `/ɪ/` (bit, sit)
+  - `/eɪ/` (make, say), `/e/` (head, bed), `/æ/` (had, cat), `/ɔ/` (law, call)
+  - `/aʊ/` (now, cow), `/aɪ/` (bite, eye), `/ɔɪ/` (boy, join), `/oʊ/` (go, home)
+- **Consonants to Watch:**
+  - Pairs: `/f/` vs `/v/`, `/s/` vs `/z/`, `/θ/` (thanks) vs `/ð/` (them)
+  - Affricates/Fricatives: `/tʃ/` (check), `/dʒ/` (just), `/ʃ/` (she), `/ʒ/` (Asia)
+  - Clusters & Liquids: `/tr/`, `/dr/`, `/r/` (red / car), `/l/` (light / well), `/ŋ/` (sing)
+
+#### Progression
 
 ```text
 useful sounds and high-frequency chunks
@@ -308,6 +357,16 @@ useful sounds and high-frequency chunks
   → follow-up questions, clarification, and repair
   → goal-specific interaction and pressure
 ```
+
+#### 6-Round Interactive Scenario Protocol
+
+For spontaneous speaking practice with AI coaching:
+
+1. **1 min setup:** Learner defines scenario, audience, and goal unscripted.
+2. **6 interaction rounds:** Spoken or typed exchange (1–2 sentences per turn).
+   - *AI Boundary:* AI **may only** ask a follow-up question, seek clarification, or request evidence. AI **may not** complete sentences, give the answer, or monologue.
+3. **2 min continuous delivery:** Learner speaks continuously on the topic without interruption; save the raw audio recording.
+4. **3 min self-review:** Learner listens back to the recording, marks hesitations/pauses (`Yeah... yeah...` moments), checks chunk collocations, and flags 1 high-impact pronunciation feature for targeted retry.
 
 Maintain a small speaking topic bank in `learner/LEARNING_STATE.md`: foundation topics, common situations, and goal-specific tasks. Revisit them until responses become flexible rather than memorized, and mark each topic as untested, developing, stable, or transfer-needed.
 

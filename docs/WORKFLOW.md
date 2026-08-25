@@ -30,6 +30,27 @@ A cycle plan is ready only when:
 
 Prefer specific frequency such as “speaking 3× this week” over vague priority labels. Use the learner's preferred days, time, timezone, and missed-session fallback. If those are unknown, schedule an ordered session slot and collect calendar preferences without blocking practice.
 
+## English Task Card
+
+Before starting interactive practice, specify the task contract and explicit AI boundaries:
+
+```markdown
+# English Task Card
+
+Date: YYYY-MM-DD
+Real situation:
+Action: understand / read / say / write / ask / revise
+Acceptance criteria:
+Material and source:
+Unaided baseline location:
+AI may: prompt with minimal hints / ask clarifying questions / point out errors / generate parallel tasks
+AI may not: answer for me / complete my sentences / rewrite a whole section / invent an unverified source
+Output location:
+Feedback evidence:
+Recurring error:
+Smallest next task:
+```
+
 ## Record a meaningful session
 
 Create `sessions/YYYY-MM-DD-short-topic.md` only for reusable evidence: diagnostic output, an unaided attempt and learner retry, delayed review, weekly review, or assessment.
@@ -74,8 +95,8 @@ For intensive listening, organize `Skill evidence` as:
 ```markdown
 First-pass gist:
 Recalled details:
-Uncertain segments:
-Barrier classification:
+Uncertain segments (timestamps):
+Barrier classification (Unknown language | Known not heard | Connected speech | Attention/load | Background):
 Closed-transcript retelling:
 Optional decision-relevant scores:
 ```
@@ -86,7 +107,7 @@ For intensive reading, organize it as:
 First-pass gist:
 Structure or sequence:
 Closed-text reconstruction:
-Supported detail or evidence/inference boundary:
+3-column verification table (Supports | Inference | Unsupported):
 Vocabulary blockers:
 Optional decision-relevant scores:
 ```
@@ -104,6 +125,18 @@ Queue changes:
 ```
 
 If a learner declares an item “due” but it has no vocabulary or queue record, label the attempt `Unrecorded carry-in baseline`. Do not backdate a review or treat the result as delayed evidence. After identifying and verifying the intended item, create the vocabulary record and first future queue item only if the item serves the goal.
+
+## Diagnostic baseline rubric
+
+When diagnosing or taking baseline snapshots across the four skills, score each dimension 0–2:
+
+| Dimension | 0 | 1 | 2 |
+| --- | --- | --- | --- |
+| Task completion | Core communicative action missing | Partly completed | Real purpose met independently |
+| Comprehensibility | Listener/reader cannot follow | Repeated clarification needed | Mostly understood on first pass |
+| Accuracy and range | Errors severely block meaning | Basic meaning conveys with limits | Forms, collocations, and syntax stable |
+| Organisation & fluency | Fragmented pieces | Connected with notable pauses | Clear structure and forward flow |
+| Revision & transfer | Cannot utilize feedback | Corrects locally with help | Applies repair in a novel context |
 
 ## Weekly review
 
@@ -125,6 +158,21 @@ When a vocabulary cycle is active, also audit the theme, independent retrieval c
 ## Explicit assessment
 
 Assessment runs only when requested. Agree on observable conditions before starting. Do not teach, hint, rewrite, or reveal target language until submission. Preserve raw output and record separate skill performance, confidence, limitations, and the next learning implication. Do not claim official CEFR certification or a validated exam score.
+
+## Ten questions before cycle completion
+
+Before concluding a 12-week cycle or claiming real capability:
+
+1. Can I explain key conclusions without viewing chat logs or AI prompts?
+2. Did I record an unaided baseline before AI entered the task?
+3. Have newly learned vocabulary chunks been actively produced in novel contexts?
+4. Are listening misses classified by specific barrier type rather than a vague “didn't catch it”?
+5. Do speaking sessions preserve raw audio, transcript, and a learner retry?
+6. Do reading judgments cite specific text paragraphs or lines?
+7. Were writing revisions authored and explained by the learner, not an AI rewrite?
+8. Has the language output been delivered to a real human audience or real task?
+9. Is confidential, private, or unauthorized data kept strictly out of the repository?
+10. Can I perform the target task with significantly less scaffolding than at week 1?
 
 ## Finish state updates
 

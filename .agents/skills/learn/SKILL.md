@@ -86,7 +86,14 @@ Before the learner begins, present:
 
 ## Teach and practise
 
-Before starting, state the task, duration, reason, and independent evidence target. For listening or reading, follow the relevant material routing and Evidence Contract in `docs/LEARNING_PATH.md`.
+Before starting, establish the **English Task Card** (define goal, criteria, baseline, and strict boundaries: `AI may:` prompt/clarify/point out errors, `AI may not:` complete sentences/rewrite/monologue). State the task, duration, reason, and independent evidence target.
+
+For listening or reading, follow the relevant material routing and Evidence Contract in `docs/LEARNING_PATH.md`:
+- **Listening:** 1st pass gist & details -> 2nd pass mark timestamps -> classify misses into the 5 barriers (*Unknown language*, *Known not heard*, *Connected speech*, *Attention/load*, *Background knowledge*) -> targeted repair -> closed-transcript retelling.
+- **Reading:** 1st pass gist -> mark blockers -> closed-source reconstruction -> for B1+, construct the 3-column verification table (*Supports*, *Inference*, *Unsupported*).
+- **Speaking:** For interactive practice, run the **6-Round Interactive Scenario Protocol** (1 min setup -> 6 turns where AI *only* asks follow-up/clarification/evidence without completing learner sentences -> 2 min continuous speech -> 3 min self-review of recording & IPA pronunciation check). Allow using Vietnamese for explanations if the learner struggles to express an idea.
+  - *Native Recording Helper:* Run `./.agents/skills/learn/scripts/record.sh -d <seconds> -t <topic>` to record microphone input directly into `artifacts/audio/` with live progress display, and inspect the resulting audio.
+  - *Gemini Live Real-time Voice:* Run `./.agents/skills/learn/scripts/live.sh -t "<topic>" -d <minutes>` for live, bidirectional spoken conversation directly over mic and speaker, with automatic session log generation.
 
 Use relevant, manageable material. For a normal 25–45 minute session, usually introduce no more than five to eight genuinely new chunks, and fewer when the learner is a beginner or retrieval load is already high.
 
@@ -97,7 +104,7 @@ When vocabulary is the bottleneck, keep it inside the goal task:
 3. verify important sense, pronunciation, collocation, and register with a learner dictionary, trusted source, or real corpus evidence before marking them verified;
 4. close the source and use cues that force one decision without revealing the target;
 5. require a changed-context speaking or writing output;
-6. update vocabulary evidence, the weekly vocabulary cycle, and queue items from the result.
+6. structure review across the 4-encounter timeline (Day 0, Day 1, Day 3, Day 7) and update vocabulary evidence and queue items.
 
 If the learner calls an item “due” but neither the queue nor vocabulary record contains it, do not invent an earlier review, due date, source, or verification. Label it an `Unrecorded carry-in`, check enough context to identify the intended item, and run a brief closed-source baseline retrieval. Preserve the cue and raw response per item. After verification, add it to vocabulary and schedule its first future queue item only when it is goal-relevant. This establishes a carry-in baseline; it is not delayed-recall or transfer evidence.
 
@@ -109,7 +116,7 @@ For known or practised language: preserve an unaided attempt, ask for self-notic
 
 One material may connect several skills, but save evidence separately. Never count a model answer, hint, visible-source repetition, or AI rewrite as independent performance.
 
-Playback time, pages, or words consumed are not completion evidence. After meaningful intensive listening or reading, schedule a parallel-material transfer check in `reviews/QUEUE.md` when it would change the plan; use similar difficulty and capability demand with different content.
+Play time, pages, or words consumed are not completion evidence. After meaningful intensive listening or reading, schedule a parallel-material transfer check in `reviews/QUEUE.md` when it would change the plan; use similar difficulty and capability demand with different content.
 
 ## Review and close
 

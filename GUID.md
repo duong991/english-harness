@@ -13,8 +13,8 @@ Repo không có database, scheduler, thuật toán SRS hay analytics. Agent là 
 
 ## Bắt đầu
 
-1. Mở repo bằng Codex, Claude Code, Cursor hoặc một AI agent tương tự.
-2. Trong Codex, gọi `$learn`. Ở agent khác, chỉ cần nói: “Hãy giúp tôi học tiếng Anh.”
+1. Mở repo bằng **Antigravity**, **Codex**, **Claude Code**, **Cursor** hoặc một AI agent tương tự.
+2. Trong Antigravity/Codex, gọi `$learn`. Ở agent khác, chỉ cần nói: “Hãy giúp tôi học tiếng Anh.”
 3. Tiếp tục dùng cùng một lệnh hoặc yêu cầu tự nhiên cho các buổi sau.
 
 Lần đầu, bạn chỉ cần cung cấp ba input chính: việc cụ thể muốn làm bằng tiếng Anh, deadline, và số buổi/phút có thể học cùng lịch ưu tiên. Agent tự draft conditions, acceptance criteria và evidence để bạn xác nhận. Khi thực tế cho phép, buổi đầu cũng có một micro-diagnostic hoặc micro-practice 3–5 phút; nó không chỉ là một cuộc phỏng vấn lập kế hoạch.
@@ -23,7 +23,7 @@ Bạn không cần nhớ các lệnh riêng cho onboarding, diagnostic, study, r
 
 ```text
 mục tiêu còn thiếu?          → onboarding
-baseline chưa đủ?            → diagnostic thích ứng
+baseline chưa đủ?            → diagnostic thích ứng (rubric 5 chiều 0–2)
 đến hạn review tuần?         → recall ngắn nếu cần evidence, rồi weekly review
 còn recall/transfer đến hạn? → delayed review
 còn lại                      → bài học tốt nhất hôm nay
@@ -118,25 +118,21 @@ skill profile → goal gap → cycle direction
 
 Nếu agent chỉ trả về “Bạn khoảng A2” rồi dừng, diagnostic chưa hoàn thành.
 
-## Một buổi học hằng ngày
+## Một buổi học hằng ngày & English Task Card
 
-Trước khi bắt đầu, agent sẽ nói ngắn:
+Trước khi bắt đầu buổi học tương tác, agent và learner thiết lập **English Task Card** để giới hạn rõ vai trò của AI:
 
-- hôm nay làm task gì;
-- mất khoảng bao lâu;
-- vì sao task này nối với goal hoặc focus tuần;
-- evidence độc lập nào cần tạo ra.
-
-Một buổi có thể tích hợp nhiều kỹ năng quanh một material:
+- **AI may (Được phép):** Gợi ý tối thiểu khi tắc, đặt câu hỏi phản biện/làm rõ, chỉ ra lỗi sai, tạo bài tập song song.
+- **AI may not (Bị cấm):** Trả lời thay, tự hoàn thiện câu của learner, viết lại toàn bộ bài (wholesale rewrite), tự bịa nguồn.
 
 ```text
 retrieve chunk đến hạn
   → nghe hoặc đọc để hiểu
-  → sửa một vài gap quan trọng
+  → sửa một vài gap quan trọng (phân loại rào cản)
   → đóng source
   → nói lại hoặc viết cho tình huống thật
   → tự nhận xét
-  → feedback ngắn
+  → feedback ngắn (tối đa 2-3 điểm)
   → learner tự thử lại
 ```
 
@@ -162,7 +158,7 @@ Trước task, agent đưa material/link, duration hoặc reading time, intensiv
 Chỉ xem hết video hoặc đọc hết bài không có nghĩa task hoàn thành:
 
 - Intensive Listening cần gist lần đầu, details, vị trí chưa chắc, error classification và retelling khi đã đóng transcript.
-- Intensive Reading cần gist lần đầu, structure/sequence, reconstruction không nhìn bài và evidence/inference task phù hợp level.
+- Intensive Reading cần gist lần đầu, structure/sequence, reconstruction không nhìn bài và bảng kiểm chứng 3 cột.
 - Extensive Listening/Reading chỉ cần gist hoặc reaction ngắn và một note về material fit; không biến hoạt động thưởng thức thành homework chi tiết.
 
 Khi hữu ích, agent dùng score 0–2 nhẹ để chọn next task, không phải gamification. Delayed check dùng material mới có độ khó và capability demand tương tự, không chỉ bật lại source cũ.
@@ -209,72 +205,85 @@ Mỗi item có thể có evidence riêng:
 - dùng đúng form/register trong writing;
 - transfer sau một khoảng delay.
 
-Repo dùng lifecycle nhẹ `New → Learning → Usable`; không giả vờ là một SRS engine.
+### Chu kỳ 4 lần tiếp xúc (4 Encounters)
+
+Để một chunk từ vựng trở nên `Usable`, quy trình chuẩn cần 4 lần tiếp xúc trải dài:
+
+| Thời điểm | Hành động | Bằng chứng kỳ vọng |
+| --- | --- | --- |
+| **Day 0** | Nhớ nghĩa từ văn cảnh và đọc to câu chứa chunk | Nghĩa chính xác và ghi âm phát âm rõ ràng |
+| **Day 1** | Đóng source, điền từ vào chỗ trống + tự đặt 1 câu cá nhân | Khả năng tự truy xuất và đúng cấu trúc |
+| **Day 3** | Chọn đúng collocation trong một chủ đề/ngữ cảnh mới | Chuyển giao ngữ cảnh (Transfer) |
+| **Day 7** | Sử dụng tự nhiên trong bài nói 60s hoặc đoạn văn ngắn | Ứng dụng tự nhiên dưới áp lực nhận thức |
 
 Với item quan trọng, agent phải kiểm tra sense, pronunciation, collocation và register bằng learner dictionary, trusted source hoặc real corpus. Một collocation do AI tạo ra chỉ là candidate; nếu chưa kiểm tra, item phải ghi `Unverified`.
 
-`VOCABULARY.md` chỉ lưu knowledge/evidence. Khi một item cần test lại, nó liên kết tới `reviews/QUEUE.md`; chỉ queue lưu due date, prompt và acceptance criteria. Trong một buổi 25–45 phút, agent thường không đưa quá 5–8 chunk hoàn toàn mới, và dùng ít hơn khi learner mới bắt đầu hoặc đã có nhiều recall đến hạn.
-
-Retrieval cue phải:
-
-- cho context, meaning, sound hoặc communicative need;
-- chỉ test một decision;
-- không lộ target, first letters hoặc source sentence;
-- chỉ hiện contrast sau khi learner đã attempt.
-
-Nếu vocabulary là bottleneck, `$learn` không mở một lớp từ vựng riêng. Nó chạy:
-
-```text
-recall chunk đến hạn không nhìn notes
-→ material thật cùng một theme
-→ chọn và verify vài chunk mới
-→ retrieval cue
-→ speaking/writing trong context khác
-→ evidence + delayed queue
-```
-
-`LEARNING_STATE.md` giữ weekly vocabulary cycle: theme gắn với goal, active set, retrieval plan, integrated output và end-of-week audit. Cuối tuần agent loại duplicate, low-value hoặc cue-dependent item không còn phục vụ goal; `Usable` có thể quay lại `Learning` nếu delayed evidence thất bại.
-
-Khi chưa đủ goal/time contract, một buổi practice ngắn chỉ tạo cycle `Provisional`; cycle chỉ thành `Active` khi lịch retrieval, output và audit thực sự khả thi. Nếu bạn mang vào một chunk và gọi nó là “đến hạn” nhưng repo chưa có record, agent ghi `Unrecorded carry-in baseline`, giữ cue + raw response theo từng item, verify item rồi mới đặt lần review tương lai — không bịa lịch sử hoặc tính attempt đầu tiên đó là delayed recall.
-
-Khoảng review phụ thuộc performance:
-
-- recall dễ và chính xác → lùi xa hơn;
-- đúng nhưng còn gắng sức → giữ interval tương tự;
-- fail lặp lại → review sớm hơn, đơn giản hóa hoặc sửa prerequisite;
-- nhận ra nhưng chưa dùng được → thêm production task.
+`VOCABULARY.md` chỉ lưu knowledge/evidence. Khi một item cần test lại, nó liên kết tới `reviews/QUEUE.md`; chỉ queue lưu due date, prompt và acceptance criteria.
 
 ## Recipe chính
 
-### Listening
+### Listening: Gist → Inspect → Repair → Retell
 
-1. Nghe lần một không transcript để lấy gist.
-2. Nghe lần hai để lấy details và đánh dấu timestamp chưa chắc.
-3. Phân loại nguyên nhân: từ mới, biết nhưng không nghe ra, connected speech, câu dài, attention, inference hoặc background knowledge.
-4. Mở transcript để repair đúng chỗ.
-5. Đóng transcript, nghe lại và retell/respond.
-6. Dùng audio tương tự ở buổi sau để test transfer.
+1. **Nghe lần một** không transcript/subtitles để nắm ý chính (Gist) và các chi tiết nhớ được.
+2. **Nghe lần hai** đánh dấu các mốc thời gian (timestamps) bị miss hoặc chưa chắc.
+3. **Phân loại vào 5 rào cản nghe:**
+   - **Unknown language:** Từ vựng, cụm từ hoặc ngữ pháp chưa từng học.
+   - **Known but not heard:** Nhìn mặt chữ thì biết, nhưng tai không nhận ra âm thanh ở tốc độ nói thật.
+   - **Connected speech & rhythm:** Nối âm, nuốt âm, trọng âm câu, biến âm, ngắt cụm (chunking).
+   - **Attention & load:** Câu quá dài, nhiều thông tin dồn dập, quá tải trí nhớ ngắn hạn.
+   - **Background knowledge:** Thiếu kiến thức chuyên ngành hoặc bối cảnh văn hóa của chủ đề.
+4. Mở transcript để **repair đúng chỗ**.
+5. Đóng transcript, nghe lại và **retell/respond**.
+6. Dùng audio tương tự ở buổi sau để kiểm tra transfer.
 
-Ngoài intensive listening ngắn và inspectable, plan nên có extensive listening dài hơn, nhẹ hơn và tập trung vào ý nghĩa.
+### Reading: Structure → Blockers → Reasoning → Reconstruction
 
-Playback time không phải evidence. Session intensive phải giữ gist, details, uncertain segments, error diagnosis và retelling; score nhẹ có thể dùng cho gist, key detail, segmentation và retelling khi nó thay đổi next task.
+1. **First pass:** Đọc lướt không dùng từ điển, nắm ý chính và đánh dấu blocker.
+2. **Second pass:** Tra cứu chỉ những từ/chunk then chốt ảnh hưởng đến lập luận.
+3. Đóng bài đọc và từ điển, **tự tái cấu trúc (reconstruct)** nội dung.
+4. Với bài đọc B1+ nâng cao, lập **Bảng kiểm chứng 3 cột (3-Column Verification Table)** kèm trích dẫn đoạn/dòng:
+   - **Văn bản hỗ trợ rõ ràng (Explicitly Supported):** Dữ kiện/luận điểm nêu trực tiếp trong bài.
+   - **Suy luận hợp lý (Reasonable Inference):** Kết luận logic dựa trên manh mối của bài.
+   - **Không có căn cứ (Unsupported / False):** Giả định không được bài viết chứng minh.
 
-### Reading
+### Speaking: IPA/Phonics & Giao thức 6 vòng phản xạ
 
-1. First pass: hiểu purpose, structure và main idea; chỉ đánh dấu blocker.
-2. Second pass: tra item recurring, domain-critical hoặc reasoning-critical.
-3. Đóng dictionary và reconstruct nội dung.
-4. Ở level cao, phân biệt điều text hỗ trợ, inference hợp lý và claim không được hỗ trợ; xem evidence, assumption và trade-off.
+#### Bảng tra nhanh Phonics / IPA cơ bản
 
-Unknown-word count không tự quyết định độ khó. Session intensive phải giữ gist, structure, reconstruction và task về supported detail hoặc inference boundary; score nhẹ có thể dùng cho gist, structure, evidence và inference khi nó thay đổi next task.
+- **15 Nguyên âm:**
+  - `/ɑ/` (cop, father), `/ə/` (the - không nhấn), `/ʌ/` (cup, sun - có nhấn)
+  - `/u/` (boot), `/ʊ/` (book), `/i/` (beat), `/ɪ/` (bit)
+  - `/eɪ/` (make), `/e/` (head), `/æ/` (had, cat), `/ɔ/` (law)
+  - `/aʊ/` (now), `/aɪ/` (bite), `/ɔɪ/` (boy), `/oʊ/` (go)
+- **Phụ âm cần lưu ý:**
+  - Cặp âm: `/f/` vs `/v/`, `/s/` vs `/z/`, `/θ/` (thanks) vs `/ð/` (them)
+  - Âm xát/tắc xát: `/tʃ/` (check), `/dʒ/` (just), `/ʃ/` (she), `/ʒ/` (Asia)
+  - Cụm âm: `/tr/`, `/dr/`, `/r/`, `/l/`, `/ŋ/` (sing)
 
-### Speaking
+#### Giao thức hội thoại 6 vòng (6-Round Interactive Scenario)
 
-Progression đi từ sound/chunk rõ ràng → câu trả lời ngắn → topic quen thuộc lặp lại → explanation kết nối → follow-up, clarification và repair → interaction theo goal.
+1. **1 phút chuẩn bị:** Nói ngắn bối cảnh, đối tượng nghe và mục tiêu (không soạn kịch bản sẵn).
+2. **6 vòng tương tác:** Trao đổi 1–2 câu mỗi lượt. AI **chỉ được hỏi lại, làm rõ hoặc yêu cầu dẫn chứng** (tuyệt đối không nói thay hoặc sửa câu hộ trong lúc đang hội thoại).
+3. **2 phút trình bày liên tục:** Nói một mạch về chủ đề đó và lưu file ghi âm raw.
+4. **3 phút tự đánh giá (Self-review):** Nghe lại ghi âm, đánh dấu các chỗ ngập ngừng (`Yeah... yeah...`), các chunk bị sượng và chọn 1 lỗi phát âm IPA quan trọng nhất để sửa.
 
-`LEARNING_STATE.md` giữ một topic bank nhỏ với trạng thái `untested`, `developing`, `stable` hoặc `transfer needed`. Recording và first take có giá trị hơn một model monologue.
+> **💡 Tool ghi âm Native tích hợp sẵn trong repo:**
+> Bạn hoặc AI có thể kích hoạt công cụ ghi âm trực tiếp bằng lệnh:
+> ```bash
+> ./.agents/skills/learn/scripts/record.sh -d 60 -t project-intro
+> ```
+> Script sẽ đếm ngược 60s, hiển thị tiến độ trực tiếp và tự lưu file vào `artifacts/audio/`. Bạn có thể bấm `Enter` bất cứ lúc nào để kết thúc ghi âm sớm.
+> 
+> **📞 Gemini Live (Hội thoại bằng giọng nói 2 chiều Real-Time):**
+> Để gọi điện thoại luyện nói trực tiếp với Gemini Live (nói qua mic, nghe qua loa với độ trễ <0.5s):
+> 1. Chuẩn bị `GEMINI_API_KEY` (lấy từ Google AI Studio) và cài `pip install -r .agents/skills/learn/scripts/requirements.txt`.
+> 2. Chạy lệnh:
+> ```bash
+> ./.agents/skills/learn/scripts/live.sh -t "Project Delay Discussion" -d 5
+> ```
+> Gemini sẽ trò chuyện cùng bạn theo ngữ cảnh của repo, và tự động ghi log buổi nói vào `sessions/` khi kết thúc!
 
-### Writing
+### Writing: Draft → Layered Review → Learner Revision
 
 ```text
 audience + purpose + criteria
@@ -288,20 +297,24 @@ audience + purpose + criteria
 
 Giữ cả draft đầu và learner revision.
 
-## Weekly Review
+## Weekly Review & Nghiệm thu chu kỳ 12 tuần
 
-Cuối mỗi tuần học, agent không chỉ đếm số giờ. Agent xem evidence theo bốn phần, mỗi phần 0–2:
+Cuối mỗi tuần học, agent xem xét bằng chứng theo 4 chiều (0–2 điểm): **Completion, Quality, Retention, Transfer**.
 
-- **Completion:** task quan trọng có được thực hiện không?
-- **Quality:** meaning và acceptance criteria đạt đến đâu?
-- **Retention:** có recall không hỗ trợ sau delay không?
-- **Transfer:** có dùng được trong context khác không?
+### Mười câu hỏi tự vấn trước khi nghiệm thu chu kỳ 12 tuần
 
-Agent cũng xem lỗi lặp lại, lỗi đang cải thiện, lỗi mới, material fit và năng lượng/recovery. Sau đó chỉ **thay đổi một điều quan trọng** cho tuần tiếp theo: difficulty, phân bổ kỹ năng, material, support, session duration hoặc review spacing.
+Trước khi tuyên bố hoàn thành một chu kỳ hoặc nghiệm thu năng lực:
 
-Nếu một recall ngắn đang đến hạn có thể cung cấp retention evidence cho weekly review và vừa session budget, agent chạy recall đó trước rồi mới chấm tuần.
-
-Một tuần tệ không tự động làm mất hiệu lực toàn bộ plan.
+1. Tôi có thể giải thích các kết luận chính mà không cần nhìn lịch sử chat hay gợi ý của AI không?
+2. Tôi có luôn làm bài thử unaided (không AI) trước khi nhận trợ giúp không?
+3. Các từ vựng/chunk mới học có được chủ động sử dụng trong ngữ cảnh mới không?
+4. Các lỗi nghe có được phân loại vào 5 rào cản cụ thể thay vì chỉ nói "không nghe kịp" không?
+5. Các buổi luyện nói có lưu lại ghi âm raw, transcript và bản tự thử lại không?
+6. Các nhận định đọc hiểu có trích dẫn đúng đoạn/dòng trong bài gốc không?
+7. Các bản sửa bài viết có do chính tôi tự viết lại và giải thích được không?
+8. Sản phẩm tiếng Anh có được gửi đến người nghe/người đọc thật trong công việc/cuộc sống không?
+9. Dữ liệu mật và thông tin riêng tư có được bảo vệ hoàn toàn không?
+10. Tôi có thực hiện được nhiệm vụ mục tiêu với ít sự trợ giúp từ AI hơn hẳn so với tuần đầu tiên không?
 
 ## Kết thúc buổi học
 

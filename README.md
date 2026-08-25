@@ -2,7 +2,7 @@
 
 > **The learner learns English. The harness keeps the goal, evidence, learning direction, and next useful action legible to the AI.**
 
-This is an agent-native, Markdown-first English-learning repository. Open it in Codex, Claude Code, Cursor, or another capable agent and say, for example, “Let’s learn English.” The agent reads the learner state, chooses the right mode and task, runs a learner-first learning loop, and keeps only useful evidence current.
+This is an agent-native, Markdown-first English-learning repository. Open it in Antigravity, Codex, Claude Code, Cursor, or another capable agent and say, for example, “Let’s learn English.” The agent reads the learner state, chooses the right mode and task, runs a learner-first learning loop, and keeps only useful evidence current.
 
 It is deliberately not an English-learning application: no CLI, database, model-provider integration, scheduler, state machine, or analytics layer. The agent is the runtime; the repository is portable memory; Git is optional history.
 
@@ -10,8 +10,8 @@ Vietnamese guide: [GUID.md](GUID.md).
 
 ## Start here
 
-1. Open this repository with an AI coding agent.
-2. In Codex, invoke `$learn`; elsewhere, ask “Help me learn English.”
+1. Open this repository with an AI coding agent (Antigravity, Codex, Claude Code, Cursor).
+2. In Antigravity/Codex, invoke `$learn`; elsewhere, ask “Help me learn English.”
 3. On the first run, provide three things: the real task English should enable, its deadline, and your realistic weekly time and preferred schedule. The agent drafts the conditions, success criteria, and comparable evidence for confirmation instead of turning onboarding into a long interview.
 4. The same run normally includes a short micro-diagnostic or practice. The agent builds an adaptive baseline for listening, reading, speaking, writing, and receptive/productive vocabulary over one or more sessions.
 5. Once the available evidence is sufficient, the agent records a cycle direction, a frequency-based skill plan, concrete sessions and exact listening/reading materials for the week, and the smallest next action in [learner/LEARNING_STATE.md](learner/LEARNING_STATE.md).
@@ -34,7 +34,7 @@ learner/VOCABULARY.md           active chunks, verification, and evidence across
 learner/ERRORS.md               recurring patterns worth revisiting
 sessions/                       raw attempts and meaningful session evidence
 reviews/QUEUE.md                delayed recall and changed-context transfer prompts
-.agents/skills/learn/SKILL.md   the single learner-facing Codex skill
+.agents/skills/learn/SKILL.md   the single learner-facing public skill
 ```
 
 ## Learning model

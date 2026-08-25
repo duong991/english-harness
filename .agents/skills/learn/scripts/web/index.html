@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Harness — Gemini Live Speaking Coach</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --primary: #38bdf8;
+      --accent: #22c55e;
+      --danger: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 680px;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    h1 { font-size: 1.6rem; color: var(--primary); margin-bottom: 8px; }
+    p.subtitle { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; }
+    
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #334155;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      transition: all 0.3s;
+    }
+    .status-badge.connected { background: rgba(34, 197, 94, 0.2); color: var(--accent); }
+    .status-badge.speaking { background: rgba(56, 189, 248, 0.2); color: var(--primary); }
+    
+    .visualizer-container {
+      height: 90px;
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #334155;
+    }
+    canvas { width: 100%; height: 100%; }
+
+    .btn-group { display: flex; gap: 12px; justify-content: center; margin-bottom: 24px; }
+    button {
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-start { background: var(--accent); color: #022c22; }
+    .btn-start:hover { background: #16a34a; }
+    .btn-turn { background: #eab308; color: #422006; }
+    .btn-turn:hover { background: #ca8a04; }
+    .btn-stop { background: var(--danger); color: #fff; }
+    .btn-stop:hover { background: #dc2626; }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .transcript-box {
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: left;
+      height: 200px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #e2e8f0;
+      border: 1px solid #334155;
+    }
+    .msg { margin-bottom: 8px; }
+    .msg.ai { color: var(--primary); font-weight: 500; }
+    .msg.user { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎙️ Gemini Live Speaking Coach</h1>
+    <p class="subtitle">Continuous Multi-turn Real-time Voice with AudioWorklet Engine</p>
+
+    <div id="status" class="status-badge">⚪ Ready to connect</div>
+
+    <div class="visualizer-container">
+      <canvas id="visualizer"></canvas>
+    </div>
+
+    <div class="btn-group">
+      <button id="startBtn" class="btn-start" onclick="startCall()">📞 Start Live Call</button>
+      <button id="endTurnBtn" class="btn-turn" onclick="endTurn()" disabled>✅ Xong lược nói (End Turn)</button>
+      <button id="stopBtn" class="btn-stop" onclick="stopCall()" disabled>🛑 End Call</button>
+    </div>
+
+    <div class="transcript-box" id="transcript">
+      <div class="msg" style="color: var(--text-muted); font-style: italic;">Live conversation will appear here...</div>
+    </div>
+  </div>
+
+  <script>
+    let ws = null;
+    let micCtx = null;
+    let playbackCtx = null;
+    let micStream = null;
+    let pcmNode = null;
+    let nextPlayTime = 0;
+    let activeSources = [];
+
+    const statusEl = document.getElementById("status");
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const endTurnBtn = document.getElementById("endTurnBtn");
+    const transcriptEl = document.getElementById("transcript");
+    const canvas = document.getElementById("visualizer");
+    const ctx = canvas.getContext("2d");
+
+    let analyser = null;
+    let animId = null;
+    let currentAIText = "";
+    let currentAIMsgDiv = null;
+
+    function initVisualizer() {
+      if (!analyser) return;
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+
+      function draw() {
+        animId = requestAnimationFrame(draw);
+        analyser.getByteTimeDomainData(dataArray);
+
+        ctx.fillStyle = "rgba(15, 23, 42, 0.4)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#38bdf8";
+        ctx.beginPath();
+
+        const sliceWidth = canvas.width * 1.0 / bufferLength;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+          const v = dataArray[i] / 128.0;
+          const y = v * canvas.height / 2;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+          x += sliceWidth;
+        }
+        ctx.lineTo(canvas.width, canvas.height / 2);
+        ctx.stroke();
+      }
+      draw();
+    }
+    
+    function endTurn() {
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: "client_turn_complete" }));
+        addTranscript("--- Đã chuyển lượt nói cho AI ---", "user");
+      }
+    }
+
+    async function startCall() {
+      startBtn.disabled = true;
+      statusEl.className = "status-badge";
+      statusEl.textContent = "⏳ Connecting to Gemini...";
+
+      // 1. Playback Audio Context (Single persistent 24kHz context)
+      playbackCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 24000 });
+      if (playbackCtx.state === "suspended") {
+        await playbackCtx.resume();
+      }
+      nextPlayTime = playbackCtx.currentTime;
+
+      // 2. Microphone stream with Hardware Echo Cancellation
+      try {
+        micStream = await navigator.mediaDevices.getUserMedia({
+          audio: {
+            echoCancellation: true,
+            noiseSuppression: true,
+            autoGainControl: true,
+            sampleRate: 16000
+          }
+        });
+      } catch (err) {
+        alert("Microphone access error: " + err.message);
+        statusEl.textContent = "❌ Mic error";
+        startBtn.disabled = false;
+        return;
+      }
+
+      // 3. Connect WebSocket
+      const protocol = location.protocol === "https:" ? "wss:" : "ws:";
+      ws = new WebSocket(`${protocol}//${location.host}/ws`);
+
+      ws.onopen = async () => {
+        statusEl.className = "status-badge connected";
+        statusEl.textContent = "🟢 Live Call Active (Speaking / Listening)";
+        stopBtn.disabled = false;
+        endTurnBtn.disabled = false;
+        await startAudioWorkletStream();
+      };
+
+      ws.onmessage = async (e) => {
+        const msg = JSON.parse(e.data);
+        if (msg.type === "text") {
+          // Xử lý stream text để append thay vì tạo dòng mới mỗi chữ
+          if (!currentAIMsgDiv) {
+            currentAIMsgDiv = document.createElement("div");
+            currentAIMsgDiv.className = "msg ai";
+            transcriptEl.appendChild(currentAIMsgDiv);
+          }
+          currentAIText += msg.content;
+          currentAIMsgDiv.textContent = "AI: " + currentAIText;
+          transcriptEl.scrollTop = transcriptEl.scrollHeight;
+        } else if (msg.type === "turn_complete") {
+          currentAIMsgDiv = null;
+          currentAIText = "";
+        } else if (msg.type === "user_text") {
+          addTranscript("User: " + msg.content, "user");
+        } else if (msg.type === "audio") {
+          scheduleAudioChunk(msg.data);
+        } else if (msg.type === "interrupted") {
+          activeSources.forEach(s => { try { s.stop(); } catch(e){} });
+          activeSources = [];
+          nextPlayTime = playbackCtx.currentTime;
+          currentAIMsgDiv = null;
+          currentAIText = "";
+        }
+      };
+
+      ws.onclose = () => {
+        stopCall();
+      };
+    }
+
+    // Modern continuous AudioWorklet Processor
+    async function startAudioWorkletStream() {
+      micCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
+      if (micCtx.state === "suspended") {
+        await micCtx.resume();
+      }
+
+      const source = micCtx.createMediaStreamSource(micStream);
+      
+      analyser = micCtx.createAnalyser();
+      analyser.fftSize = 256;
+      source.connect(analyser);
+      initVisualizer();
+
+      const workletCode = `
+        class PCMProcessor extends AudioWorkletProcessor {
+          process(inputs, outputs, parameters) {
+            const input = inputs[0];
+            if (input && input[0]) {
+              const channel = input[0];
+              const pcm16 = new Int16Array(channel.length);
+              for (let i = 0; i < channel.length; i++) {
+                const s = Math.max(-1, Math.min(1, channel[i]));
+                pcm16[i] = s < 0 ? s * 0x8000 : s * 0x7FFF;
+              }
+              this.port.postMessage(pcm16.buffer, [pcm16.buffer]);
+            }
+            return true;
+          }
+        }
+        registerProcessor('pcm-processor', PCMProcessor);
+      `;
+
+      const blob = new Blob([workletCode], { type: 'application/javascript' });
+      const workletUrl = URL.createObjectURL(blob);
+      await micCtx.audioWorklet.addModule(workletUrl);
+
+      pcmNode = new AudioWorkletNode(micCtx, 'pcm-processor');
+      pcmNode.port.onmessage = (e) => {
+        if (ws && ws.readyState === WebSocket.OPEN) {
+          ws.send(e.data);
+        }
+      };
+
+      source.connect(pcmNode);
+    }
+
+    function scheduleAudioChunk(base64Data) {
+      if (!playbackCtx) return;
+      const binaryString = atob(base64Data);
+      const len = binaryString.length;
+      const alignedLen = len - (len % 2);
+      const bytes = new Uint8Array(alignedLen);
+      for (let i = 0; i < alignedLen; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+      const pcm16 = new Int16Array(bytes.buffer);
+      const float32 = new Float32Array(pcm16.length);
+      for (let i = 0; i < pcm16.length; i++) {
+        float32[i] = pcm16[i] / 32768.0;
+      }
+
+      const audioBuffer = playbackCtx.createBuffer(1, float32.length, 24000);
+      audioBuffer.copyToChannel(float32, 0);
+
+      const source = playbackCtx.createBufferSource();
+      source.buffer = audioBuffer;
+      source.connect(playbackCtx.destination);
+
+      const curTime = playbackCtx.currentTime;
+      if (nextPlayTime < curTime) {
+        nextPlayTime = curTime + 0.025;
+      }
+
+      source.start(nextPlayTime);
+      nextPlayTime += audioBuffer.duration;
+
+      activeSources.push(source);
+      source.onended = () => {
+        const idx = activeSources.indexOf(source);
+        if (idx !== -1) activeSources.splice(idx, 1);
+      };
+    }
+
+    function addTranscript(text, type) {
+      const msg = document.createElement("div");
+      msg.className = "msg " + type;
+      msg.textContent = text;
+      transcriptEl.appendChild(msg);
+      transcriptEl.scrollTop = transcriptEl.scrollHeight;
+    }
+
+    function stopCall() {
+      if (animId) { cancelAnimationFrame(animId); animId = null; }
+      if (ws) { ws.close(); ws = null; }
+      if (micStream) { micStream.getTracks().forEach(t => t.stop()); micStream = null; }
+      if (pcmNode) { pcmNode.disconnect(); pcmNode = null; }
+      if (micCtx) { micCtx.close(); micCtx = null; }
+      if (playbackCtx) {
+        activeSources.forEach(s => { try { s.stop(); } catch(e){} });
+        activeSources = [];
+        playbackCtx.close();
+        playbackCtx = null;
+      }
+      statusEl.className = "status-badge";
+      statusEl.textContent = "⚪ Call Ended (Saved to sessions/)";
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+      endTurnBtn.disabled = true;
+    }
+  </script>
+</body>
+</html>
