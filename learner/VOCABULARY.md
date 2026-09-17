@@ -28,7 +28,41 @@ No active items yet.
 
 ## Usable
 
-No active items yet.
+### -ish (time suffix)
+Current sense: Khoảng, tầm (dùng gắn sau giờ hoặc tính từ).
+Pronunciation or sound note: /ɪʃ/
+Useful patterns:
+- at 7ish / around 8ish
+Register or constraint: Informal/Spoken
+Source or origin: 2026-08-25 ELLLO #1452
+Verification:
+- Sense and pronunciation source: Cambridge Dictionary
+- Collocation or register evidence: Spoken English
+- Checked: 2026-08-25
+- Status: Verified
+Learner example: I usually get up at 7ish
+Evidence:
+- [x] Writing — used with suitable form/register: retrieved 2026-08-25
+Review queue item:
+- `reviews/QUEUE.md#time-suffix-ish`
+
+### have toast for breakfast
+Current sense: Ăn bánh mì nướng cho bữa sáng.
+Pronunciation or sound note: /təʊst/
+Useful patterns:
+- have toast / eat toast
+Register or constraint: Neutral/Everyday
+Source or origin: 2026-08-25 ELLLO #1452
+Verification:
+- Sense and pronunciation source: Oxford Learner's Dictionaries
+- Collocation or register evidence: Standard breakfast collocation
+- Checked: 2026-08-25
+- Status: Verified
+Learner example: i usually have toast for breakfast
+Evidence:
+- [x] Writing — used with suitable form/register: retrieved 2026-08-25
+Review queue item:
+- `reviews/QUEUE.md#have-toast-for-breakfast`
 
 ## Entry format
 

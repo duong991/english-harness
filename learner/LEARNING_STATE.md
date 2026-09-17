@@ -46,22 +46,22 @@ Status: Active.
 
 | Skill | Practical estimate | Confidence | Strongest evidence | Main gap |
 | --- | --- | --- | --- | --- |
-| Listening | Not established | Low | Needs initial everyday audio baseline. | Sound discrimination & speed. |
+| Listening | A2 Solid | Medium | 2026-08-25: ELLLO #1452 gist & details ~75%. | Sound confusion (`toast`/`tooth`), suffix `-ish`. |
 | Reading | A2 Basic / B1 | Low | Needs fresh unassisted baseline. | Everyday vocabulary breadth. |
 | Speaking | A2 Basic | Low | Needs fresh unassisted baseline. | Fluency & automatic chunk retrieval. |
 | Writing | A2 Basic | Low | Needs fresh unassisted baseline. | Grammar accuracy. |
-| Vocabulary — receptive | A2 | Low | Needs everyday frequency check. | High-frequency core idioms & chunks. |
+| Vocabulary — receptive | A2 | Medium | Good basic routine words; missed `chores`, `toast`. | High-frequency daily chunks. |
 | Vocabulary — productive | A2 | Low | Needs everyday frequency check. | Action verbs, linking words, collocations. |
 
 ## Baseline coverage (5-Dimension Rubric: 0–2)
 
 | Area | Status | Next evidence needed |
 | --- | --- | --- |
-| Listening | Open | Short everyday conversation audio clip comprehension check. |
+| Listening | Collected (A2 Solid) | B1 audio test next. |
 | Reading | Open | Short everyday narrative / dialogue gist check. |
 | Speaking | Open | 1-minute prompt: daily routine or personal introduction. |
 | Writing | Open | Short unscripted note / message. |
-| Vocabulary | Open | Core 2,000–3,000 word frequency diagnostic. |
+| Vocabulary | In progress | Daily routine core chunks check. |
 
 ## Current cycle
 
@@ -123,25 +123,32 @@ Status: Active.
 
 | Slot or date | Duration | Focus | Task and evidence | Status |
 | --- | --- | --- | --- | --- |
-| Session 1 | 30–45 min | Everyday Baseline | Core vocab diagnostic + short audio listening check | Planned |
+| 2026-08-25 | 25 min | Listening Baseline | ELLLO #1452: Gist + details ~75%, retrieval `7ish` and `toast`. | Completed |
+| 2026-08-26 | 10 min | Day 1 Review & Vocab scan | Recall `-ish`, `toast`; scan 20 từ cốt lõi chủ đề Daily Routine. | Planned |
 
 ## This week's materials
 
 | Skill and mode | Specific material | Why selected | Material length / session time | Required evidence | Status |
 | --- | --- | --- | --- | --- | --- |
-| Listening & Vocab | Everyday Dialogue / Daily Routine | Baseline diagnostic | 2-3 mins clip / 30 mins | Gist, key details, vocab recall | Planned |
+| Listening & Vocab | ELLLO #1452 (A Typical Day) | Baseline diagnostic | 2m 22s / 25 mins | Gist, key details, vocab recall | Completed |
 
 ## Evidence so far
 
-No evidence recorded yet (clean state).
+- **2026-08-25 Baseline (Listening - ELLLO #1452 "A Typical Day" A2):**
+  - Gist: Nắm tốt (thói quen sinh hoạt / daily routines).
+  - Chi tiết: Bắt được ~75% (Aimee dậy 6h, uống cafe, rời nhà 7h-7h30, ăn sandwich, Todd ăn chicken/salad, nhắc con làm việc nhà, về nhà lúc 10h/đi gym, ngủ lúc 11h).
+  - Điểm sửa âm: Nhầm `toast` thành `tooth`; `7ish` thành 6h.
+  - Closed-source retrieval: Tạo câu tự nhiên hoàn hảo với `at 7ish` và `have toast for breakfast`.
+  - Xếp loại: **A2 Vững (Solid A2)**.
 
 ## Current bottlenecks
 
-Need clean everyday baseline to calibrate difficulty.
+- Nhầm lẫn âm nguyên âm đôi và đuôi từ (`toast` vs `tooth`).
+- Vốn từ đời sống chưa bật ngay khi nghe tốc độ nhanh.
 
 ## Methods that worked
 
-To be tested.
+- Nghe bắt ý tổng quan -> phân tích âm sai -> đóng transcript tự đặt câu.
 
 ## Hypotheses to test
 
@@ -157,13 +164,13 @@ To be tested.
 
 ## Next action
 
-**Task:** Bắt đầu Session 1: Kiểm tra baseline nghe hiểu đời sống và chẩn đoán vốn từ vựng cốt lõi.
-**Expected duration:** 20-30 min.
-**Material:** Hội thoại đời sống ngắn (Everyday dialogue).
-**Evidence to save:** Gist, chi tiết nghe được, từ vựng nhận diện được.
-**Acceptance criteria:** Thu thập đủ baseline cho Listening và Vocabulary.
-**Why this is next:** Cần dữ liệu xuất phát điểm để đo lường tiến độ.
-**Suggested time:** Ngay bây giờ hoặc buổi học tiếp theo.
+**Task:** Ôn tập Day 1 (SRS) cho `-ish` và `toast` + Quét nhận diện 20 từ vựng cốt lõi chủ đề Daily Routine.
+**Expected duration:** 10–15 phút.
+**Material:** Hàng đợi `reviews/QUEUE.md` + Danh sách 20 động từ sinh hoạt hàng ngày.
+**Evidence to save:** Kết quả trả lời không nhìn tài liệu.
+**Acceptance criteria:** Trả lời đúng retrieval cue trong 30 giây.
+**Why this is next:** Củng cố âm thanh trong 24h đầu để không bị quên.
+**Suggested time:** Ngày mai (2026-08-26).
 
 ## Weekly review
 

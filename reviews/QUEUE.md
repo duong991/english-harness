@@ -10,7 +10,33 @@ No reviews due.
 
 ## Later
 
-No later reviews scheduled.
+### time-suffix-ish
+Due: 2026-08-26
+Type: delayed recall
+Skill: Vocabulary — productive
+Source evidence: 2026-08-25 baseline session
+Related vocabulary or error item: `learner/VOCABULARY.md#-ish-time-suffix`
+Parallel material or exact selection constraint: Time expression
+Unaided prompt: Bạn hẹn gặp bạn bè vào khoảng tầm 8 giờ tối. Hãy diễn đạt câu ngắn gọn bằng tiếng Anh có dùng hậu tố nói giờ xấp xỉ vừa học.
+Vocabulary retrieval cue, when applicable: Let's meet at 8____.
+Target decision: Recall and use `-ish` attached to time.
+Contrast if confused, hidden until after the attempt: `-ish` vs `about / around`
+Acceptance criteria: Produces `8ish` or `around 8ish`.
+After attempt: complete
+
+### have-toast-for-breakfast
+Due: 2026-08-26
+Type: delayed recall
+Skill: Vocabulary — sound & productive
+Source evidence: 2026-08-25 baseline session
+Related vocabulary or error item: `learner/VOCABULARY.md#have-toast-for-breakfast`
+Parallel material or exact selection constraint: Breakfast food
+Unaided prompt: Nói câu tiếng Anh: "Tôi thường ăn bánh mì nướng vào buổi sáng". Chú ý phát âm đúng từ bánh mì nướng (không nhầm với răng).
+Vocabulary retrieval cue, when applicable: I usually have _____ for breakfast.
+Target decision: Retrieve `toast` (/təʊst/).
+Contrast if confused, hidden until after the attempt: `toast` /təʊst/ vs `tooth` /tuːθ/
+Acceptance criteria: Produces `toast` correctly.
+After attempt: complete
 
 ## Item format
 
