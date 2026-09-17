@@ -63,7 +63,9 @@ A level label without a concrete weekly plan and changed next action is not a co
 
 ## Select the material
 
-For a listening or reading task, the agent owns selection. Do not tell the learner to “find a B1 podcast/article,” and do not dump a list of links.
+For a listening or reading task, the agent owns selection. Do not tell the learner to “find a B1 podcast/article,” and do not dump a list of links. 
+
+If you do not already have suitable material recorded for this week, do not search for it directly in the main conversation. Instead, load the `librarian` skill and delegate the search to the Librarian subagent. Wait for its result, then use that recommended material to set up the task.
 
 Use the current goal, skill estimate, active vocabulary, session time, access constraints, and `PROFILE.md` material preferences. Evaluate exact candidates with the six-factor rubric in `docs/LEARNING_PATH.md`. Reuse a small source pool that has worked before; search more broadly only when it lacks a suitable item.
 

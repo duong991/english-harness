@@ -4,7 +4,7 @@ Track only patterns that repeat or materially block meaning, task completion, in
 
 ## Active
 
-No recurring patterns confirmed yet.
+No active errors yet.
 
 ## Improving
 

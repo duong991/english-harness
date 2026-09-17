@@ -1,200 +1,177 @@
 # Learning State
 
-Updated: 2026-08-23 — template initialized; no learner evidence yet.
+Updated: 2026-08-25 — Reset for fresh cycle prioritizing Everyday English & Core Vocabulary.
 
 This is the central dashboard. Keep it concise enough that a new agent can answer: What real outcome matters? What can the learner currently do? What is this cycle and week trying to change? What is the smallest next action?
 
 ## Goal contract
 
-Status: Open. Do not create a long-term plan yet.
+Status: Active.
 
-**Context and people:** Not established.
+**Context and people:** Understand everyday spoken English and daily communication contexts without depending on AI; participate in basic daily and work conversations.
 
-**Observable outcome:** Not established.
+**Observable outcome:** Over one 12-week cycle, build functional core vocabulary and listening capability (A2->B1) to follow ~80-90% of everyday conversations, handle daily life interactions, and communicate basic thoughts independently.
 
-**Conditions:** Not established.
+**Real-world delivery milestone (12-Week Target):**
+- Follow 3–5 minute everyday audio clips (podcast, dialogue, street conversation) and summarize main ideas + key details with >75% accuracy;
+- Sustain a 3-minute casual conversation or self-introduction/daily routine description without script or AI assistance;
+- Master the Oxford 3000 / A1–B1 core receptive vocabulary foundation.
 
-**Acceptance criteria:** Not established.
+**Conditions:** 3 sessions per week (Mon, Wed, Fri), 60–120 minutes per session (20:00 - 22:00). AI provides input materials, phonology/sound mapping, and feedback, but never aids unaided retrieval attempts.
 
-**Deadline or review horizon:** Not established.
+**Acceptance criteria:**
+- Listening: accurately identify gist and key details from everyday spoken clips without transcripts on the first pass.
+- Vocabulary: recognize 20–30 high-frequency everyday items/day receptively; retrieve 5–7 high-utility chunks productively per week.
+- Speaking: produce spontaneous 1–2 minute spoken/proxied responses to daily prompts with low hesitation.
 
-**Comparable evidence:** Not established.
+**Deadline or review horizon:** Start fresh 2026-08-25; 12-week review on or around 2026-11-17.
+
+**Comparable evidence:** No active baseline recorded yet.
 
 ## Time budget
 
-**Sessions per week:** Not established.
+**Sessions per week:** 3 sessions.
 
-**Minutes per session:** Not established.
+**Minutes per session:** 60–120 minutes.
 
-**Preferred days:** Not established.
+**Preferred days:** Monday, Wednesday, Friday.
 
-**Preferred time:** Not established.
+**Preferred time:** 20:00 - 22:00.
 
-**Timezone:** Not established.
+**Timezone:** Asia/Ho_Chi_Minh.
 
-**Fallback if a session is missed:** Not established.
-
-**Schedule or recovery constraints:** Not established.
+**Fallback if a session is missed:** Next available evening.
 
 ## Current skill profile
 
 | Skill | Practical estimate | Confidence | Strongest evidence | Main gap |
 | --- | --- | --- | --- | --- |
-| Listening | Not established | — | No audio sample. | Unknown. |
-| Reading | Not established | — | No raw sample. | Unknown. |
-| Speaking | Not established | — | No recorded sample. | Unknown. |
-| Writing | Not established | — | No unaided draft. | Unknown. |
-| Vocabulary — receptive | Not established | — | No contextual recognition evidence. | Unknown. |
-| Vocabulary — productive | Not established | — | No closed-source use evidence. | Unknown. |
+| Listening | Not established | Low | Needs initial everyday audio baseline. | Sound discrimination & speed. |
+| Reading | A2 Basic / B1 | Low | Needs fresh unassisted baseline. | Everyday vocabulary breadth. |
+| Speaking | A2 Basic | Low | Needs fresh unassisted baseline. | Fluency & automatic chunk retrieval. |
+| Writing | A2 Basic | Low | Needs fresh unassisted baseline. | Grammar accuracy. |
+| Vocabulary — receptive | A2 | Low | Needs everyday frequency check. | High-frequency core idioms & chunks. |
+| Vocabulary — productive | A2 | Low | Needs everyday frequency check. | Action verbs, linking words, collocations. |
 
-Use the shared labels `A0–A1 Foundation`, `A2 Basic`, `B1 Independent`, `B2 Flexible`, and `C1+ Advanced`, or a range when evidence is incomplete. These are practical working estimates, not official CEFR certification. Typed speaking is a limited proxy and written text is not listening evidence.
-
-## Baseline coverage
+## Baseline coverage (5-Dimension Rubric: 0–2)
 
 | Area | Status | Next evidence needed |
 | --- | --- | --- |
-| Listening | Missing | Short permitted audio: gist and selected details without transcript. |
-| Reading | Missing | Manageable text: main idea and important details. |
-| Speaking | Missing | Short unscripted familiar response, preferably recorded. |
-| Writing | Missing | Short unaided message for a real audience and purpose. |
-| Vocabulary | Missing | Receptive and productive evidence observed inside the four tasks. |
-
-Use `Environment-limited` rather than `Missing` when the current host cannot collect valid audio or recording evidence. That status does not block a provisional plan; name a later opportunity to collect it.
+| Listening | Open | Short everyday conversation audio clip comprehension check. |
+| Reading | Open | Short everyday narrative / dialogue gist check. |
+| Speaking | Open | 1-minute prompt: daily routine or personal introduction. |
+| Writing | Open | Short unscripted note / message. |
+| Vocabulary | Open | Core 2,000–3,000 word frequency diagnostic. |
 
 ## Current cycle
 
-**Dates:** Not planned until the goal contract and enough baseline evidence exist.
+**Dates:** 2026-08-25 to 2026-11-17.
 
-**Horizon:** Usually up to 12 weeks; use the learner's actual deadline and capacity.
+**Horizon:** 12 weeks.
 
-**Week:** Not started.
+**Week:** 1 - Clean Start & Everyday Baseline.
 
-**Cycle outcome:** Not established.
+**Cycle outcome:** Accelerate everyday listening comprehension and core vocabulary acquisition (Oxford 3000 / A1–B1 focus).
 
-**Phase:** Goal discovery and adaptive diagnostic.
+**Phase:** Initial diagnostic and baseline collection.
 
-**Goal gap:** Not established.
+**Goal gap:** Need baseline evidence across listening, speaking, and core vocabulary.
 
-**Priority order:** Not established.
+**Priority order:**
+1. Core everyday receptive vocabulary & sound mapping (listening).
+2. Spoken retrieval of high-frequency chunks.
+3. Daily communicative writing/reading.
 
 ## Skill plan
 
-Translate cycle direction into visible weekly work. Use frequency rather than vague priority alone.
-
 | Area | Current | Goal demand | Weekly work | Main method |
 | --- | --- | --- | --- | --- |
-| Vocabulary | Not established | Unknown | Pending goal and baseline | Chunks, retrieval, and transfer |
-| Listening | Not established | Unknown | Pending goal and baseline | Intensive repair plus extensive exposure |
-| Speaking | Not established | Unknown | Pending goal and baseline | Short responses, interaction, and repeated topics |
-| Reading | Not established | Unknown | Pending goal and baseline | Meaning, structure, and goal-relevant reasoning |
-| Writing | Not established | Unknown | Pending goal and baseline | Audience-aware draft, revision, and parallel task |
+| Vocabulary | A2 | B1 | Daily self-study + 3 sessions | High-frequency lists, sound recognition, productive chunks |
+| Listening | Untested | B1 | 2-3 sessions | Everyday dialogue, audio first, no transcript on pass 1 |
+| Speaking | Untested | A2+/B1 | 1-2 sessions | Bounded everyday prompts, voice or typed proxy |
+| Reading | Untested | B1 | Integrated | Everyday stories, practical notices, dialogues |
+| Writing | Untested | A2+/B1 | Integrated | Short summaries and personal responses |
 
 ## Vocabulary cycle
 
-Use this when productive or receptive vocabulary is a current bottleneck. Keep one goal-linked theme rather than collecting unrelated words.
+**Status:** Active.
 
-**Status:** Inactive. Use `Provisional` for a bounded practice before the full goal/time contract exists; use `Active` only when the weekly plan is actionable.
+**Theme and goal link:** Everyday life, daily routines, social interactions, high-frequency spoken chunks.
 
-**Theme and goal link:** Not established.
+**Active set:** None yet (ready for session 1).
 
-**Active set:** None yet.
+**New-candidate budget:** 20–30 receptive items/day (self/input) + 5–7 productive chunks/week (in harness).
 
-**New-candidate budget:** Not established. Set from level, session count, and retrieval load; it is not a quota.
+**Closed-source retrieval plan:** First review in upcoming session.
 
-**Closed-source retrieval plan:** Not established. Selected items should normally receive at least two meaningful retrieval opportunities across the week when the schedule allows.
+**Integrated weekly output:** Summary of an everyday story or conversation using new chunks.
 
-**Integrated weekly output:** Not established. Choose one speaking or writing task that requires the theme in a changed context.
-
-**End-of-week audit:** Keep, move, demote, or remove items from evidence; remove duplicates, low-value items, and items that remain cue-dependent without goal value.
+**End-of-week audit:** Pending.
 
 ## This week
 
-**Dates:** Not started.
+**Dates:** 2026-08-25 to 2026-08-30.
 
-**Focus:** Establish an actionable goal and begin the easiest useful baseline sample.
+**Focus:** Run everyday baseline diagnostic (Listening + Core Vocabulary + Speaking).
 
 **Planned evidence:**
-
-- Goal contract and realistic time budget.
-- One short raw skill sample during the first run when practical.
-
-**Maintenance:** None yet.
+- Everyday listening comprehension baseline.
+- Core vocabulary diagnostic (receptive).
+- 1-minute everyday speaking/typed sample.
 
 ## This week's sessions
 
-Schedule concrete sessions when the goal and baseline allow it. Use preferred days and time; otherwise keep ordered slots until calendar preferences are known.
-
 | Slot or date | Duration | Focus | Task and evidence | Status |
 | --- | --- | --- | --- | --- |
-| First available | 10–15 min | Goal setup + micro-diagnostic | Confirm a drafted goal contract and produce one short raw sample | Planned |
+| Session 1 | 30–45 min | Everyday Baseline | Core vocab diagnostic + short audio listening check | Planned |
 
 ## This week's materials
 
-Record exact items or exact excerpts after selection. Do not use this table for vague source categories.
-
 | Skill and mode | Specific material | Why selected | Material length / session time | Required evidence | Status |
 | --- | --- | --- | --- | --- | --- |
-| Not selected | Pending goal, baseline, and access check | — | — | — | Open |
+| Listening & Vocab | Everyday Dialogue / Daily Routine | Baseline diagnostic | 2-3 mins clip / 30 mins | Gist, key details, vocab recall | Planned |
 
 ## Evidence so far
 
-No meaningful learner evidence recorded yet.
+No evidence recorded yet (clean state).
 
 ## Current bottlenecks
 
-Not enough evidence to identify a learning bottleneck. The immediate system bottleneck is the missing goal contract.
+Need clean everyday baseline to calibrate difficulty.
 
 ## Methods that worked
 
-No evidence yet.
+To be tested.
 
 ## Hypotheses to test
 
-- Start with a short, familiar, low-pressure task after goal discovery; adjust difficulty from the learner's response.
+- Focusing on high-frequency everyday words will unlock faster listening comprehension than technical vocabulary.
+- Audio-first input builds stronger phonological memory than reading-first input.
 
 ## Speaking topic bank
 
-Use `untested`, `developing`, `stable`, or `transfer needed`. Populate topics from the learner's real contexts rather than assuming a work domain.
-
 ### Foundation
-
-- Introduce yourself — untested.
-- Describe a normal day or recent event — untested.
-
-### Common situations
-
-Not established yet.
-
-### Goal-specific
-
-Not established yet.
+- Introduce yourself, daily routine, hobbies, hometown.
+- Ordering food, shopping, asking for directions.
+- Making plans with friends or colleagues.
 
 ## Next action
 
-**Task:** Invoke `$learn`, provide the real outcome, deadline, and weekly time budget; confirm the drafted goal contract and complete a short micro-diagnostic.
-
-**Expected duration:** About 10–15 minutes.
-
-**Material:** None.
-
-**Evidence to save:** The learner's goal/time inputs, confirmed contract, and one short raw skill sample when practical.
-
-**Acceptance criteria:** An actionable first goal draft plus evidence that selects the next diagnostic or learning task.
-
-**Why this is next:** A responsible cycle plan cannot be created until the goal is actionable.
-
-**Suggested time:** At the learner's next available study time; replace this with a concrete date, local time, and timezone after schedule preferences are known.
+**Task:** Bắt đầu Session 1: Kiểm tra baseline nghe hiểu đời sống và chẩn đoán vốn từ vựng cốt lõi.
+**Expected duration:** 20-30 min.
+**Material:** Hội thoại đời sống ngắn (Everyday dialogue).
+**Evidence to save:** Gist, chi tiết nghe được, từ vựng nhận diện được.
+**Acceptance criteria:** Thu thập đủ baseline cho Listening và Vocabulary.
+**Why this is next:** Cần dữ liệu xuất phát điểm để đo lường tiến độ.
+**Suggested time:** Ngay bây giờ hoặc buổi học tiếp theo.
 
 ## Weekly review
 
-**Next review:** Set after the first learning week is planned.
-
+**Next review:** 2026-08-30.
 **Latest scores:** No review yet.
-
 **Error movement and energy:** No evidence yet.
-
 **One change for next week:** Not applicable.
 
 ## Latest assessment
 
-No explicitly requested assessment yet.
+No assessment yet.
